@@ -1,0 +1,1345 @@
+2020-07-02 16:48:31,723 p=61880 u=spectre n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  mapping values are not allowed here
+
+The error appears to be in '/Users/spectre/workspace/ansible/softether-playbook/roles/vpn/tasks/install.yml': line 2, column 11, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+- name: SoftEther VPN Directory
+    become: true
+          ^ here
+
+2020-07-02 16:57:22,932 p=67479 u=spectre n=ansible | PLAY [vpn_servers] ************************************************************************************************************************
+2020-07-02 16:57:22,950 p=67479 u=spectre n=ansible | TASK [Gathering Facts] ********************************************************************************************************************
+2020-07-02 16:57:25,003 p=67479 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python interpreter at /usr/bin/python, but future installation of
+another Python interpreter could change this. See https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for
+more information.
+
+2020-07-02 16:57:25,003 p=67479 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 16:57:25,012 p=67479 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] ******************************************************************************************************
+2020-07-02 16:57:26,466 p=67479 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 16:57:26,479 p=67479 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] *************************************************************************************************
+2020-07-02 16:57:26,716 p=67479 u=spectre n=ansible | fatal: [54.95.40.115]: FAILED! => {"changed": false, "msg": "src (or content) and dest are required"}
+2020-07-02 16:57:26,717 p=67479 u=spectre n=ansible | PLAY RECAP ********************************************************************************************************************************
+2020-07-02 16:57:26,718 p=67479 u=spectre n=ansible | 54.95.40.115               : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-07-02 16:58:14,134 p=68072 u=spectre n=ansible | PLAY [vpn_servers] ************************************************************************************************************************
+2020-07-02 16:58:14,149 p=68072 u=spectre n=ansible | TASK [Gathering Facts] ********************************************************************************************************************
+2020-07-02 16:58:15,699 p=68072 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python interpreter at /usr/bin/python, but future installation of
+another Python interpreter could change this. See https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for
+more information.
+
+2020-07-02 16:58:15,699 p=68072 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 16:58:15,710 p=68072 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] ******************************************************************************************************
+2020-07-02 16:58:16,707 p=68072 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 16:58:16,718 p=68072 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] *************************************************************************************************
+2020-07-02 16:58:20,806 p=68072 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 16:58:20,809 p=68072 u=spectre n=ansible | PLAY RECAP ********************************************************************************************************************************
+2020-07-02 16:58:20,809 p=68072 u=spectre n=ansible | 54.95.40.115               : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-07-02 17:59:26,814 p=7391 u=spectre n=ansible | PLAY [vpn_servers] ************************************************************************************************************************
+2020-07-02 17:59:26,830 p=7391 u=spectre n=ansible | TASK [Gathering Facts] ********************************************************************************************************************
+2020-07-02 17:59:28,758 p=7391 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python interpreter at /usr/bin/python, but future installation of
+another Python interpreter could change this. See https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for
+more information.
+
+2020-07-02 17:59:28,759 p=7391 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 17:59:28,767 p=7391 u=spectre n=ansible | TASK [config : Install and Update dependency packages] ************************************************************************************
+2020-07-02 17:59:30,021 p=7391 u=spectre n=ansible | fatal: [54.95.40.115]: FAILED! => {"changed": false, "msg": "It appears that a space separated string of packages was passed in as an argument. To operate on several packages, pass a comma separated string of packages or a list of packages."}
+2020-07-02 17:59:30,022 p=7391 u=spectre n=ansible | PLAY RECAP ********************************************************************************************************************************
+2020-07-02 17:59:30,022 p=7391 u=spectre n=ansible | 54.95.40.115               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-07-02 18:01:27,781 p=8713 u=spectre n=ansible | PLAY [vpn_servers] ************************************************************************************************************************
+2020-07-02 18:01:27,796 p=8713 u=spectre n=ansible | TASK [Gathering Facts] ********************************************************************************************************************
+2020-07-02 18:01:29,705 p=8713 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python interpreter at /usr/bin/python, but future installation of
+another Python interpreter could change this. See https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for
+more information.
+
+2020-07-02 18:01:29,706 p=8713 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 18:01:29,716 p=8713 u=spectre n=ansible | TASK [config : Install and Update dependency packages] ************************************************************************************
+2020-07-02 18:01:30,958 p=8713 u=spectre n=ansible | fatal: [54.95.40.115]: FAILED! => {"changed": false, "msg": "It appears that a space separated string of packages was passed in as an argument. To operate on several packages, pass a comma separated string of packages or a list of packages."}
+2020-07-02 18:01:30,960 p=8713 u=spectre n=ansible | PLAY RECAP ********************************************************************************************************************************
+2020-07-02 18:01:30,960 p=8713 u=spectre n=ansible | 54.95.40.115               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-07-02 18:02:27,668 p=9399 u=spectre n=ansible | PLAY [vpn_servers] ************************************************************************************************************************
+2020-07-02 18:02:27,679 p=9399 u=spectre n=ansible | TASK [Gathering Facts] ********************************************************************************************************************
+2020-07-02 18:02:29,188 p=9399 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python interpreter at /usr/bin/python, but future installation of
+another Python interpreter could change this. See https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for
+more information.
+
+2020-07-02 18:02:29,189 p=9399 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 18:02:29,198 p=9399 u=spectre n=ansible | TASK [config : Install and Update dependency packages] ************************************************************************************
+2020-07-02 18:03:06,061 p=9399 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 18:03:06,071 p=9399 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] ******************************************************************************************************
+2020-07-02 18:03:07,311 p=9399 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 18:03:07,320 p=9399 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] *************************************************************************************************
+2020-07-02 18:03:12,648 p=9399 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 18:03:12,656 p=9399 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] *******************************************************************************************************
+2020-07-02 18:03:13,592 p=9399 u=spectre n=ansible | fatal: [54.95.40.115]: FAILED! => {"changed": false, "cmd": "/bin/gmake i_read_and_agree_the_license_agreement", "msg": "gmake: *** ターゲット `i_read_and_agree_the_license_agreement' を make するルールがありません.  中止.", "rc": 2, "stderr": "gmake: *** ターゲット `i_read_and_agree_the_license_agreement' を make するルールがありません.  中止.\n", "stderr_lines": ["gmake: *** ターゲット `i_read_and_agree_the_license_agreement' を make するルールがありません.  中止."], "stdout": "", "stdout_lines": []}
+2020-07-02 18:03:13,600 p=9399 u=spectre n=ansible | PLAY RECAP ********************************************************************************************************************************
+2020-07-02 18:03:13,600 p=9399 u=spectre n=ansible | 54.95.40.115               : ok=4    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-07-02 18:03:49,233 p=10313 u=spectre n=ansible | PLAY [vpn_servers] ************************************************************************************************************************
+2020-07-02 18:03:49,251 p=10313 u=spectre n=ansible | TASK [Gathering Facts] ********************************************************************************************************************
+2020-07-02 18:03:50,749 p=10313 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python interpreter at /usr/bin/python, but future installation of
+another Python interpreter could change this. See https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for
+more information.
+
+2020-07-02 18:03:50,750 p=10313 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 18:03:50,758 p=10313 u=spectre n=ansible | TASK [config : Install and Update dependency packages] ************************************************************************************
+2020-07-02 18:03:54,124 p=10313 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 18:03:54,133 p=10313 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] ******************************************************************************************************
+2020-07-02 18:03:55,122 p=10313 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 18:03:55,129 p=10313 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] *************************************************************************************************
+2020-07-02 18:03:59,446 p=10313 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 18:03:59,455 p=10313 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] *******************************************************************************************************
+2020-07-02 18:04:00,468 p=10313 u=spectre n=ansible | fatal: [54.95.40.115]: FAILED! => {"changed": false, "cmd": "/bin/gmake", "msg": "gmake: *** ターゲットが指定されておらず, makefile も見つかりません.  中止.", "rc": 2, "stderr": "gmake: *** ターゲットが指定されておらず, makefile も見つかりません.  中止.\n", "stderr_lines": ["gmake: *** ターゲットが指定されておらず, makefile も見つかりません.  中止."], "stdout": "", "stdout_lines": []}
+2020-07-02 18:04:00,470 p=10313 u=spectre n=ansible | PLAY RECAP ********************************************************************************************************************************
+2020-07-02 18:04:00,470 p=10313 u=spectre n=ansible | 54.95.40.115               : ok=4    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-07-02 18:04:44,405 p=10975 u=spectre n=ansible | PLAY [vpn_servers] ************************************************************************************************************************
+2020-07-02 18:04:44,419 p=10975 u=spectre n=ansible | TASK [Gathering Facts] ********************************************************************************************************************
+2020-07-02 18:04:46,050 p=10975 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python interpreter at /usr/bin/python, but future installation of
+another Python interpreter could change this. See https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for
+more information.
+
+2020-07-02 18:04:46,050 p=10975 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 18:04:46,063 p=10975 u=spectre n=ansible | TASK [config : Install and Update dependency packages] ************************************************************************************
+2020-07-02 18:04:49,519 p=10975 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 18:04:49,529 p=10975 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] ******************************************************************************************************
+2020-07-02 18:04:50,529 p=10975 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 18:04:50,540 p=10975 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] *************************************************************************************************
+2020-07-02 18:04:53,697 p=10975 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 18:04:53,706 p=10975 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] *******************************************************************************************************
+2020-07-02 18:05:35,397 p=10975 u=spectre n=ansible |  [ERROR]: User interrupted execution
+
+2020-07-02 18:10:59,164 p=14982 u=spectre n=ansible | PLAY [vpn_servers] ************************************************************************************************************************
+2020-07-02 18:10:59,180 p=14982 u=spectre n=ansible | TASK [Gathering Facts] ********************************************************************************************************************
+2020-07-02 18:11:01,146 p=14982 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python interpreter at /usr/bin/python, but future installation of
+another Python interpreter could change this. See https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for
+more information.
+
+2020-07-02 18:11:01,147 p=14982 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 18:11:01,156 p=14982 u=spectre n=ansible | TASK [config : Install and Update dependency packages] ************************************************************************************
+2020-07-02 18:11:04,646 p=14982 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 18:11:04,654 p=14982 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] ******************************************************************************************************
+2020-07-02 18:11:05,894 p=14982 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 18:11:05,905 p=14982 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] *************************************************************************************************
+2020-07-02 18:11:08,670 p=14982 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 18:11:08,678 p=14982 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] *******************************************************************************************************
+2020-07-02 18:11:12,108 p=14982 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 18:11:12,110 p=14982 u=spectre n=ansible | PLAY RECAP ********************************************************************************************************************************
+2020-07-02 18:11:12,110 p=14982 u=spectre n=ansible | 54.95.40.115               : ok=5    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-07-02 18:35:44,476 p=30810 u=spectre n=ansible | PLAY [vpn_servers] ************************************************************************************************************************
+2020-07-02 18:35:44,493 p=30810 u=spectre n=ansible | TASK [Gathering Facts] ********************************************************************************************************************
+2020-07-02 18:35:46,453 p=30810 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python interpreter at /usr/bin/python, but future installation of
+another Python interpreter could change this. See https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for
+more information.
+
+2020-07-02 18:35:46,453 p=30810 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 18:35:46,465 p=30810 u=spectre n=ansible | TASK [config : Install and Update dependency packages] ************************************************************************************
+2020-07-02 18:35:49,836 p=30810 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 18:35:49,845 p=30810 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] ******************************************************************************************************
+2020-07-02 18:35:50,824 p=30810 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 18:35:50,834 p=30810 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] *************************************************************************************************
+2020-07-02 18:35:53,977 p=30810 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 18:35:53,986 p=30810 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] *******************************************************************************************************
+2020-07-02 18:35:57,463 p=30810 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 18:35:57,471 p=30810 u=spectre n=ansible | TASK [vpn : Move vpnserver to Target Directory] *******************************************************************************************
+2020-07-02 18:35:58,318 p=30810 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 18:35:58,325 p=30810 u=spectre n=ansible | TASK [vpn : Move vpncmd to Target Directory] **********************************************************************************************
+2020-07-02 18:35:59,043 p=30810 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 18:35:59,046 p=30810 u=spectre n=ansible | PLAY RECAP ********************************************************************************************************************************
+2020-07-02 18:35:59,046 p=30810 u=spectre n=ansible | 54.95.40.115               : ok=7    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-07-02 22:58:08,492 p=66199 u=spectre n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  expected <block end>, but found '-'
+
+The error appears to be in '/Users/spectre/workspace/ansible/softether-playbook/roles/vpn/tasks/systemd.yml': line 15, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: Restart and enable
+  ^ here
+
+2020-07-02 22:58:25,406 p=66406 u=spectre n=ansible | PLAY [vpn_servers] *******************************************************************************************************************************************************************
+2020-07-02 22:58:25,437 p=66406 u=spectre n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************************************
+2020-07-02 22:58:33,078 p=66406 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python interpreter at /usr/bin/python, but future installation of another Python interpreter could change
+this. See https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information.
+
+2020-07-02 22:58:33,079 p=66406 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 22:58:33,088 p=66406 u=spectre n=ansible | TASK [config : Install and Update dependency packages] *******************************************************************************************************************************
+2020-07-02 22:58:39,976 p=66406 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 22:58:39,983 p=66406 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] *************************************************************************************************************************************************
+2020-07-02 22:58:44,892 p=66406 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 22:58:44,903 p=66406 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] ********************************************************************************************************************************************
+2020-07-02 22:58:54,468 p=66406 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 22:58:54,475 p=66406 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] **************************************************************************************************************************************************
+2020-07-02 22:59:00,481 p=66406 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 22:59:00,490 p=66406 u=spectre n=ansible | TASK [vpn : Move vpnserver to Target Directory] **************************************************************************************************************************************
+2020-07-02 22:59:02,726 p=66406 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 22:59:02,735 p=66406 u=spectre n=ansible | TASK [vpn : Move vpncmd to Target Directory] *****************************************************************************************************************************************
+2020-07-02 22:59:06,087 p=66406 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 22:59:06,100 p=66406 u=spectre n=ansible | TASK [vpn : Register softether vpn server to systemd] ********************************************************************************************************************************
+2020-07-02 22:59:15,323 p=66406 u=spectre n=ansible | ERROR! The requested handler 'restart softether vpn server' was not found in either the main handlers list nor in the listening handlers list
+2020-07-02 23:00:24,810 p=67768 u=spectre n=ansible | PLAY [vpn_servers] *******************************************************************************************************************************************************************
+2020-07-02 23:00:24,828 p=67768 u=spectre n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************************************
+2020-07-02 23:00:32,421 p=67768 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python interpreter at /usr/bin/python, but future installation of another Python interpreter could change
+this. See https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information.
+
+2020-07-02 23:00:32,421 p=67768 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 23:00:32,431 p=67768 u=spectre n=ansible | TASK [config : Install and Update dependency packages] *******************************************************************************************************************************
+2020-07-02 23:00:39,173 p=67768 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 23:00:39,181 p=67768 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] *************************************************************************************************************************************************
+2020-07-02 23:00:45,905 p=67768 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 23:00:45,914 p=67768 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] ********************************************************************************************************************************************
+2020-07-02 23:00:59,652 p=67768 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 23:00:59,662 p=67768 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] **************************************************************************************************************************************************
+2020-07-02 23:01:07,359 p=67768 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 23:01:07,375 p=67768 u=spectre n=ansible | TASK [vpn : Move vpnserver to Target Directory] **************************************************************************************************************************************
+2020-07-02 23:01:11,943 p=67768 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 23:01:11,951 p=67768 u=spectre n=ansible | TASK [vpn : Move vpncmd to Target Directory] *****************************************************************************************************************************************
+2020-07-02 23:01:16,405 p=67768 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 23:01:16,416 p=67768 u=spectre n=ansible | TASK [vpn : Register softether vpn server to systemd] ********************************************************************************************************************************
+2020-07-02 23:01:25,561 p=67768 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 23:01:25,577 p=67768 u=spectre n=ansible | TASK [vpn : Reload service] **********************************************************************************************************************************************************
+2020-07-02 23:01:30,386 p=67768 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 23:01:30,395 p=67768 u=spectre n=ansible | TASK [vpn : Restart and enable] ******************************************************************************************************************************************************
+2020-07-02 23:01:34,856 p=67768 u=spectre n=ansible | fatal: [54.95.40.115]: FAILED! => {"changed": false, "msg": "Unable to start service softether: Job for softether.service failed because the control process exited with error code. See \"systemctl status softether.service\" and \"journalctl -xe\" for details.\n"}
+2020-07-02 23:01:34,858 p=67768 u=spectre n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************
+2020-07-02 23:01:34,858 p=67768 u=spectre n=ansible | 54.95.40.115               : ok=9    changed=5    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-07-02 23:07:44,399 p=72517 u=spectre n=ansible | PLAY [vpn_servers] *******************************************************************************************************************************************************************
+2020-07-02 23:07:44,416 p=72517 u=spectre n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************************************
+2020-07-02 23:07:56,639 p=72517 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python interpreter at /usr/bin/python, but future installation of another Python interpreter could change
+this. See https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information.
+
+2020-07-02 23:07:56,639 p=72517 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 23:07:56,649 p=72517 u=spectre n=ansible | TASK [config : Install and Update dependency packages] *******************************************************************************************************************************
+2020-07-02 23:08:04,376 p=72517 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 23:08:04,385 p=72517 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] *************************************************************************************************************************************************
+2020-07-02 23:08:09,405 p=72517 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 23:08:09,415 p=72517 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] ********************************************************************************************************************************************
+2020-07-02 23:08:20,667 p=72517 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 23:08:20,676 p=72517 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] **************************************************************************************************************************************************
+2020-07-02 23:08:27,690 p=72517 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 23:08:27,700 p=72517 u=spectre n=ansible | TASK [vpn : Move vpnserver to Target Directory] **************************************************************************************************************************************
+2020-07-02 23:08:34,012 p=72517 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 23:08:34,022 p=72517 u=spectre n=ansible | TASK [vpn : Move vpncmd to Target Directory] *****************************************************************************************************************************************
+2020-07-02 23:08:40,874 p=72517 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 23:08:40,883 p=72517 u=spectre n=ansible | TASK [vpn : Register softether vpn server to systemd] ********************************************************************************************************************************
+2020-07-02 23:08:51,509 p=72517 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 23:08:51,520 p=72517 u=spectre n=ansible | TASK [vpn : Reload service] **********************************************************************************************************************************************************
+2020-07-02 23:08:57,669 p=72517 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 23:08:57,678 p=72517 u=spectre n=ansible | TASK [vpn : Restart and enable] ******************************************************************************************************************************************************
+2020-07-02 23:09:02,378 p=72517 u=spectre n=ansible | fatal: [54.95.40.115]: FAILED! => {"changed": false, "msg": "Unable to start service softether: Job for softether.service failed because the control process exited with error code. See \"systemctl status softether.service\" and \"journalctl -xe\" for details.\n"}
+2020-07-02 23:09:02,379 p=72517 u=spectre n=ansible | RUNNING HANDLER [vpn : restart softether vpn server] *********************************************************************************************************************************
+2020-07-02 23:09:02,380 p=72517 u=spectre n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************
+2020-07-02 23:09:02,380 p=72517 u=spectre n=ansible | 54.95.40.115               : ok=9    changed=6    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-07-02 23:20:14,544 p=80605 u=spectre n=ansible | PLAY [vpn_servers] *******************************************************************************************************************************************************************
+2020-07-02 23:20:14,562 p=80605 u=spectre n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************************************
+2020-07-02 23:20:24,134 p=80605 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python interpreter at /usr/bin/python, but future installation of another Python interpreter could change
+this. See https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information.
+
+2020-07-02 23:20:24,135 p=80605 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 23:20:24,144 p=80605 u=spectre n=ansible | TASK [config : Install and Update dependency packages] *******************************************************************************************************************************
+2020-07-02 23:20:32,576 p=80605 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 23:20:32,590 p=80605 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] *************************************************************************************************************************************************
+2020-07-02 23:20:37,080 p=80605 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 23:20:37,090 p=80605 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] ********************************************************************************************************************************************
+2020-07-02 23:20:45,989 p=80605 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 23:20:45,997 p=80605 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] **************************************************************************************************************************************************
+2020-07-02 23:20:52,336 p=80605 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 23:20:52,344 p=80605 u=spectre n=ansible | TASK [vpn : Move vpnserver to Target Directory] **************************************************************************************************************************************
+2020-07-02 23:20:56,433 p=80605 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 23:20:56,444 p=80605 u=spectre n=ansible | TASK [vpn : Move vpncmd to Target Directory] *****************************************************************************************************************************************
+2020-07-02 23:21:00,255 p=80605 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 23:21:00,265 p=80605 u=spectre n=ansible | TASK [vpn : Register softether vpn server to systemd] ********************************************************************************************************************************
+2020-07-02 23:21:08,682 p=80605 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 23:21:08,691 p=80605 u=spectre n=ansible | TASK [vpn : Reload service] **********************************************************************************************************************************************************
+2020-07-02 23:21:11,896 p=80605 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 23:21:11,905 p=80605 u=spectre n=ansible | TASK [vpn : Restart and enable] ******************************************************************************************************************************************************
+2020-07-02 23:21:16,239 p=80605 u=spectre n=ansible | fatal: [54.95.40.115]: FAILED! => {"changed": false, "msg": "Unable to start service softether: Job for softether.service failed because the control process exited with error code. See \"systemctl status softether.service\" and \"journalctl -xe\" for details.\n"}
+2020-07-02 23:21:16,240 p=80605 u=spectre n=ansible | RUNNING HANDLER [vpn : restart softether vpn server] *********************************************************************************************************************************
+2020-07-02 23:21:16,242 p=80605 u=spectre n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************
+2020-07-02 23:21:16,243 p=80605 u=spectre n=ansible | 54.95.40.115               : ok=9    changed=6    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-07-02 23:28:36,562 p=86110 u=spectre n=ansible | PLAY [vpn_servers] *******************************************************************************************************************************************************************
+2020-07-02 23:28:36,579 p=86110 u=spectre n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************************************
+2020-07-02 23:28:43,192 p=86110 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python interpreter at /usr/bin/python, but future installation of another Python interpreter could change
+this. See https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information.
+
+2020-07-02 23:28:43,192 p=86110 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 23:28:43,203 p=86110 u=spectre n=ansible | TASK [config : Install and Update dependency packages] *******************************************************************************************************************************
+2020-07-02 23:28:49,122 p=86110 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 23:28:49,130 p=86110 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] *************************************************************************************************************************************************
+2020-07-02 23:28:52,988 p=86110 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 23:28:53,001 p=86110 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] ********************************************************************************************************************************************
+2020-07-02 23:29:00,495 p=86110 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 23:29:00,504 p=86110 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] **************************************************************************************************************************************************
+2020-07-02 23:29:06,617 p=86110 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 23:29:06,625 p=86110 u=spectre n=ansible | TASK [vpn : Move vpnserver to Target Directory] **************************************************************************************************************************************
+2020-07-02 23:29:11,038 p=86110 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 23:29:11,046 p=86110 u=spectre n=ansible | TASK [vpn : Move vpncmd to Target Directory] *****************************************************************************************************************************************
+2020-07-02 23:29:15,224 p=86110 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 23:29:15,232 p=86110 u=spectre n=ansible | TASK [vpn : Register softether vpn server to systemd] ********************************************************************************************************************************
+2020-07-02 23:29:21,688 p=86110 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 23:29:21,697 p=86110 u=spectre n=ansible | TASK [vpn : Reload service] **********************************************************************************************************************************************************
+2020-07-02 23:29:25,602 p=86110 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 23:29:25,612 p=86110 u=spectre n=ansible | TASK [vpn : Restart and enable] ******************************************************************************************************************************************************
+2020-07-02 23:29:30,290 p=86110 u=spectre n=ansible | fatal: [54.95.40.115]: FAILED! => {"changed": false, "msg": "Unable to start service softether: Job for softether.service failed because the control process exited with error code. See \"systemctl status softether.service\" and \"journalctl -xe\" for details.\n"}
+2020-07-02 23:29:30,292 p=86110 u=spectre n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************
+2020-07-02 23:29:30,292 p=86110 u=spectre n=ansible | 54.95.40.115               : ok=9    changed=6    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-07-02 23:41:18,886 p=94321 u=spectre n=ansible | PLAY [vpn_servers] *******************************************************************************************************************************************************************
+2020-07-02 23:41:18,901 p=94321 u=spectre n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************************************
+2020-07-02 23:41:22,581 p=94321 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python interpreter at /usr/bin/python, but future installation of another Python interpreter could change
+this. See https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information.
+
+2020-07-02 23:41:22,582 p=94321 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 23:41:22,591 p=94321 u=spectre n=ansible | TASK [config : Install and Update dependency packages] *******************************************************************************************************************************
+2020-07-02 23:41:26,946 p=94321 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 23:41:26,957 p=94321 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] *************************************************************************************************************************************************
+2020-07-02 23:41:28,553 p=94321 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 23:41:28,561 p=94321 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] ********************************************************************************************************************************************
+2020-07-02 23:41:32,690 p=94321 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 23:41:32,699 p=94321 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] **************************************************************************************************************************************************
+2020-07-02 23:41:37,193 p=94321 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 23:41:37,203 p=94321 u=spectre n=ansible | TASK [vpn : Move vpnserver to Target Directory] **************************************************************************************************************************************
+2020-07-02 23:41:37,242 p=94321 u=spectre n=ansible | fatal: [54.95.40.115]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'vpnserver_dir' is undefined\n\nThe error appears to be in '/Users/spectre/workspace/ansible/softether-playbook/roles/vpn/tasks/install.yml': line 24, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: Move vpnserver to Target Directory\n  ^ here\n"}
+2020-07-02 23:41:37,245 p=94321 u=spectre n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************
+2020-07-02 23:41:37,246 p=94321 u=spectre n=ansible | 54.95.40.115               : ok=5    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-07-02 23:42:38,502 p=95236 u=spectre n=ansible | PLAY [vpn_servers] *******************************************************************************************************************************************************************
+2020-07-02 23:42:38,518 p=95236 u=spectre n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************************************
+2020-07-02 23:42:41,936 p=95236 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python interpreter at /usr/bin/python, but future installation of another Python interpreter could change
+this. See https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information.
+
+2020-07-02 23:42:41,937 p=95236 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 23:42:41,945 p=95236 u=spectre n=ansible | TASK [config : Install and Update dependency packages] *******************************************************************************************************************************
+2020-07-02 23:42:46,252 p=95236 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 23:42:46,260 p=95236 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] *************************************************************************************************************************************************
+2020-07-02 23:42:48,221 p=95236 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-02 23:42:48,230 p=95236 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] ********************************************************************************************************************************************
+2020-07-02 23:42:53,591 p=95236 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 23:42:53,598 p=95236 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] **************************************************************************************************************************************************
+2020-07-02 23:42:58,975 p=95236 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 23:42:58,986 p=95236 u=spectre n=ansible | TASK [vpn : Register softether vpn server to systemd] ********************************************************************************************************************************
+2020-07-02 23:43:04,000 p=95236 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 23:43:04,009 p=95236 u=spectre n=ansible | TASK [vpn : Reload service] **********************************************************************************************************************************************************
+2020-07-02 23:43:06,452 p=95236 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 23:43:06,461 p=95236 u=spectre n=ansible | TASK [vpn : Restart and enable] ******************************************************************************************************************************************************
+2020-07-02 23:43:09,401 p=95236 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 23:43:09,402 p=95236 u=spectre n=ansible | RUNNING HANDLER [vpn : restart softether vpn server] *********************************************************************************************************************************
+2020-07-02 23:43:14,163 p=95236 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-02 23:43:14,166 p=95236 u=spectre n=ansible | PLAY RECAP ***************************************************************************************************************************************************************************
+2020-07-02 23:43:14,166 p=95236 u=spectre n=ansible | 54.95.40.115               : ok=9    changed=6    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-07-03 17:59:56,696 p=93647 u=spectre n=ansible | PLAY [vpn_servers] **************************************************************************************************************************
+2020-07-03 17:59:56,715 p=93647 u=spectre n=ansible | TASK [Gathering Facts] **********************************************************************************************************************
+2020-07-03 18:00:01,087 p=93647 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python interpreter at /usr/bin/python, but future installation of
+another Python interpreter could change this. See https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for
+more information.
+
+2020-07-03 18:00:01,087 p=93647 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 18:00:01,096 p=93647 u=spectre n=ansible | TASK [config : Install and Update dependency packages] **************************************************************************************
+2020-07-03 18:00:04,659 p=93647 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 18:00:04,670 p=93647 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] ********************************************************************************************************
+2020-07-03 18:00:05,538 p=93647 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 18:00:05,548 p=93647 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] ***************************************************************************************************
+2020-07-03 18:00:08,241 p=93647 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 18:00:08,248 p=93647 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] *********************************************************************************************************
+2020-07-03 18:00:11,622 p=93647 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 18:00:11,632 p=93647 u=spectre n=ansible | TASK [vpn : Register softether vpn server to systemd] ***************************************************************************************
+2020-07-03 18:00:12,897 p=93647 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 18:00:12,907 p=93647 u=spectre n=ansible | TASK [vpn : Reload service] *****************************************************************************************************************
+2020-07-03 18:00:13,983 p=93647 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 18:00:13,993 p=93647 u=spectre n=ansible | TASK [vpn : Restart and enable] *************************************************************************************************************
+2020-07-03 18:00:15,209 p=93647 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 18:00:15,217 p=93647 u=spectre n=ansible | TASK [vpn : Copy config file] ***************************************************************************************************************
+2020-07-03 18:00:16,005 p=93647 u=spectre n=ansible | fatal: [54.95.40.115]: FAILED! => {"msg": "Failed to get information on remote file (/opt/softether/vpnserver/vpncmd/../config): Not a directory"}
+2020-07-03 18:00:16,008 p=93647 u=spectre n=ansible | PLAY RECAP **********************************************************************************************************************************
+2020-07-03 18:00:16,009 p=93647 u=spectre n=ansible | 54.95.40.115               : ok=8    changed=3    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-07-03 18:08:19,715 p=94949 u=spectre n=ansible | PLAY [vpn_servers] **************************************************************************************************************************
+2020-07-03 18:08:19,732 p=94949 u=spectre n=ansible | TASK [Gathering Facts] **********************************************************************************************************************
+2020-07-03 18:08:21,630 p=94949 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python interpreter at /usr/bin/python, but future installation of
+another Python interpreter could change this. See https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for
+more information.
+
+2020-07-03 18:08:21,630 p=94949 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 18:08:21,639 p=94949 u=spectre n=ansible | TASK [config : Install and Update dependency packages] **************************************************************************************
+2020-07-03 18:08:25,103 p=94949 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 18:08:25,111 p=94949 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] ********************************************************************************************************
+2020-07-03 18:08:25,956 p=94949 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 18:08:25,965 p=94949 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] ***************************************************************************************************
+2020-07-03 18:08:28,686 p=94949 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 18:08:28,694 p=94949 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] *********************************************************************************************************
+2020-07-03 18:08:31,963 p=94949 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 18:08:31,973 p=94949 u=spectre n=ansible | TASK [vpn : Register softether vpn server to systemd] ***************************************************************************************
+2020-07-03 18:08:33,164 p=94949 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 18:08:33,188 p=94949 u=spectre n=ansible | TASK [vpn : Reload service] *****************************************************************************************************************
+2020-07-03 18:08:34,105 p=94949 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 18:08:34,114 p=94949 u=spectre n=ansible | TASK [vpn : Restart and enable] *************************************************************************************************************
+2020-07-03 18:08:35,240 p=94949 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 18:08:35,249 p=94949 u=spectre n=ansible | TASK [vpn : Copy config file] ***************************************************************************************************************
+2020-07-03 18:08:37,259 p=94949 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 18:08:37,261 p=94949 u=spectre n=ansible | PLAY RECAP **********************************************************************************************************************************
+2020-07-03 18:08:37,262 p=94949 u=spectre n=ansible | 54.95.40.115               : ok=9    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-07-03 18:43:12,700 p=99585 u=spectre n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  expected <block end>, but found '<scalar>'
+
+The error appears to be in '/Users/spectre/workspace/ansible/softether-playbook/roles/vpn/tasks/configure.yml': line 9, column 32, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  become_user: root
+  command: "{{ vpncmd_path }}" localhost /server /PASSWORD: /CMD ConfigSet config
+                               ^ here
+We could be wrong, but this one looks like it might be an issue with
+missing quotes. Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2020-07-03 18:43:47,581 p=99720 u=spectre n=ansible | PLAY [vpn_servers] **************************************************************************************************************************
+2020-07-03 18:43:47,600 p=99720 u=spectre n=ansible | TASK [Gathering Facts] **********************************************************************************************************************
+2020-07-03 18:43:49,435 p=99720 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python interpreter at /usr/bin/python, but future installation of
+another Python interpreter could change this. See https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for
+more information.
+
+2020-07-03 18:43:49,435 p=99720 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 18:43:49,444 p=99720 u=spectre n=ansible | TASK [config : Install and Update dependency packages] **************************************************************************************
+2020-07-03 18:43:52,880 p=99720 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 18:43:52,890 p=99720 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] ********************************************************************************************************
+2020-07-03 18:43:53,814 p=99720 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 18:43:53,824 p=99720 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] ***************************************************************************************************
+2020-07-03 18:43:56,873 p=99720 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 18:43:56,882 p=99720 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] *********************************************************************************************************
+2020-07-03 18:44:00,250 p=99720 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 18:44:00,260 p=99720 u=spectre n=ansible | TASK [vpn : Register softether vpn server to systemd] ***************************************************************************************
+2020-07-03 18:44:01,457 p=99720 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 18:44:01,466 p=99720 u=spectre n=ansible | TASK [vpn : Reload service] *****************************************************************************************************************
+2020-07-03 18:44:02,400 p=99720 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 18:44:02,410 p=99720 u=spectre n=ansible | TASK [vpn : Restart and enable] *************************************************************************************************************
+2020-07-03 18:44:03,628 p=99720 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 18:44:03,637 p=99720 u=spectre n=ansible | TASK [vpn : Copy config file] ***************************************************************************************************************
+2020-07-03 18:44:05,516 p=99720 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 18:44:05,524 p=99720 u=spectre n=ansible | TASK [vpn : Configure softether vpn server] *************************************************************************************************
+2020-07-03 18:46:20,000 p=99720 u=spectre n=ansible |  [ERROR]: User interrupted execution
+
+2020-07-03 18:49:46,437 p=1309 u=spectre n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  found unacceptable key (unhashable type: 'AnsibleMapping')
+
+The error appears to be in '/Users/spectre/workspace/ansible/softether-playbook/roles/vpn/tasks/configure.yml': line 9, column 13, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  become_user: root
+  command: {{ item }}
+            ^ here
+We could be wrong, but this one looks like it might be an issue with
+missing quotes. Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2020-07-03 18:50:59,019 p=1546 u=spectre n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  found unacceptable key (unhashable type: 'AnsibleMapping')
+
+The error appears to be in '/Users/spectre/workspace/ansible/softether-playbook/roles/vpn/tasks/configure.yml': line 9, column 13, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  become_user: root
+  command: {{ item }}
+            ^ here
+We could be wrong, but this one looks like it might be an issue with
+missing quotes. Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2020-07-03 18:51:23,703 p=1623 u=spectre n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  found unacceptable key (unhashable type: 'AnsibleMapping')
+
+The error appears to be in '/Users/spectre/workspace/ansible/softether-playbook/roles/vpn/tasks/configure.yml': line 9, column 13, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  become_user: root
+  command: {{ item }}
+            ^ here
+We could be wrong, but this one looks like it might be an issue with
+missing quotes. Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2020-07-03 18:51:54,879 p=1776 u=spectre n=ansible | PLAY [vpn_servers] **************************************************************************************************************************
+2020-07-03 18:51:54,899 p=1776 u=spectre n=ansible | TASK [Gathering Facts] **********************************************************************************************************************
+2020-07-03 18:51:56,849 p=1776 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python interpreter at /usr/bin/python, but future installation of
+another Python interpreter could change this. See https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for
+more information.
+
+2020-07-03 18:51:56,850 p=1776 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 18:51:56,859 p=1776 u=spectre n=ansible | TASK [config : Install and Update dependency packages] **************************************************************************************
+2020-07-03 18:52:00,337 p=1776 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 18:52:00,346 p=1776 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] ********************************************************************************************************
+2020-07-03 18:52:01,351 p=1776 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 18:52:01,365 p=1776 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] ***************************************************************************************************
+2020-07-03 18:52:04,419 p=1776 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 18:52:04,427 p=1776 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] *********************************************************************************************************
+2020-07-03 18:52:07,793 p=1776 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 18:52:07,804 p=1776 u=spectre n=ansible | TASK [vpn : Register softether vpn server to systemd] ***************************************************************************************
+2020-07-03 18:52:09,109 p=1776 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 18:52:09,119 p=1776 u=spectre n=ansible | TASK [vpn : Reload service] *****************************************************************************************************************
+2020-07-03 18:52:10,150 p=1776 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 18:52:10,161 p=1776 u=spectre n=ansible | TASK [vpn : Restart and enable] *************************************************************************************************************
+2020-07-03 18:52:11,380 p=1776 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 18:52:11,390 p=1776 u=spectre n=ansible | TASK [vpn : Copy config file] ***************************************************************************************************************
+2020-07-03 18:52:13,291 p=1776 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 18:52:13,298 p=1776 u=spectre n=ansible | TASK [vpn : Configure softether vpn server] *************************************************************************************************
+2020-07-03 18:52:14,133 p=1776 u=spectre n=ansible | failed: [54.95.40.115] (item=chdir /opt/softether/vpnserver/vpncmd) => {"ansible_loop_var": "item", "changed": false, "cmd": "chdir /opt/softether/vpnserver/vpncmd", "item": "chdir /opt/softether/vpnserver/vpncmd", "msg": "[Errno 2] No such file or directory", "rc": 2}
+2020-07-03 18:52:58,858 p=1776 u=spectre n=ansible |  [ERROR]: User interrupted execution
+
+2020-07-03 18:53:01,781 p=2075 u=spectre n=ansible | PLAY [vpn_servers] **************************************************************************************************************************
+2020-07-03 18:53:01,795 p=2075 u=spectre n=ansible | TASK [Gathering Facts] **********************************************************************************************************************
+2020-07-03 18:53:03,521 p=2075 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python interpreter at /usr/bin/python, but future installation of
+another Python interpreter could change this. See https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for
+more information.
+
+2020-07-03 18:53:03,521 p=2075 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 18:53:03,531 p=2075 u=spectre n=ansible | TASK [config : Install and Update dependency packages] **************************************************************************************
+2020-07-03 18:53:06,948 p=2075 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 18:53:06,965 p=2075 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] ********************************************************************************************************
+2020-07-03 18:53:07,962 p=2075 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 18:53:07,969 p=2075 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] ***************************************************************************************************
+2020-07-03 18:53:11,184 p=2075 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 18:53:11,193 p=2075 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] *********************************************************************************************************
+2020-07-03 18:53:14,667 p=2075 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 18:53:14,675 p=2075 u=spectre n=ansible | TASK [vpn : Register softether vpn server to systemd] ***************************************************************************************
+2020-07-03 18:53:15,924 p=2075 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 18:53:15,932 p=2075 u=spectre n=ansible | TASK [vpn : Reload service] *****************************************************************************************************************
+2020-07-03 18:53:16,917 p=2075 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 18:53:16,924 p=2075 u=spectre n=ansible | TASK [vpn : Restart and enable] *************************************************************************************************************
+2020-07-03 18:53:18,002 p=2075 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 18:53:18,010 p=2075 u=spectre n=ansible | TASK [vpn : Copy config file] ***************************************************************************************************************
+2020-07-03 18:53:19,954 p=2075 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 18:53:19,962 p=2075 u=spectre n=ansible | TASK [vpn : Configure softether vpn server] *************************************************************************************************
+2020-07-03 18:53:20,795 p=2075 u=spectre n=ansible | failed: [54.95.40.115] (item=chdir /opt/softether/vpnserver) => {"ansible_loop_var": "item", "changed": false, "cmd": "chdir /opt/softether/vpnserver", "item": "chdir /opt/softether/vpnserver", "msg": "[Errno 2] No such file or directory", "rc": 2}
+2020-07-03 18:54:29,898 p=2075 u=spectre n=ansible |  [ERROR]: User interrupted execution
+
+2020-07-03 18:54:32,652 p=2509 u=spectre n=ansible | PLAY [vpn_servers] **************************************************************************************************************************
+2020-07-03 18:54:32,665 p=2509 u=spectre n=ansible | TASK [Gathering Facts] **********************************************************************************************************************
+2020-07-03 18:54:34,150 p=2509 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python interpreter at /usr/bin/python, but future installation of
+another Python interpreter could change this. See https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for
+more information.
+
+2020-07-03 18:54:34,151 p=2509 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 18:54:34,159 p=2509 u=spectre n=ansible | TASK [config : Install and Update dependency packages] **************************************************************************************
+2020-07-03 18:54:37,578 p=2509 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 18:54:37,585 p=2509 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] ********************************************************************************************************
+2020-07-03 18:54:38,581 p=2509 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 18:54:38,591 p=2509 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] ***************************************************************************************************
+2020-07-03 18:54:41,401 p=2509 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 18:54:41,409 p=2509 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] *********************************************************************************************************
+2020-07-03 18:54:44,782 p=2509 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 18:54:44,790 p=2509 u=spectre n=ansible | TASK [vpn : Register softether vpn server to systemd] ***************************************************************************************
+2020-07-03 18:54:46,016 p=2509 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 18:54:46,024 p=2509 u=spectre n=ansible | TASK [vpn : Reload service] *****************************************************************************************************************
+2020-07-03 18:54:46,936 p=2509 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 18:54:46,944 p=2509 u=spectre n=ansible | TASK [vpn : Restart and enable] *************************************************************************************************************
+2020-07-03 18:54:48,011 p=2509 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 18:54:48,019 p=2509 u=spectre n=ansible | TASK [vpn : Copy config file] ***************************************************************************************************************
+2020-07-03 18:54:49,963 p=2509 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 18:54:49,970 p=2509 u=spectre n=ansible | TASK [vpn : Configure softether vpn server] *************************************************************************************************
+2020-07-03 18:54:50,790 p=2509 u=spectre n=ansible | changed: [54.95.40.115] => (item=cd /opt/softether/vpnserver)
+2020-07-03 18:57:44,347 p=2509 u=spectre n=ansible |  [ERROR]: User interrupted execution
+
+2020-07-03 22:04:22,585 p=17459 u=spectre n=ansible | PLAY [vpn_servers] ************************************************************************************************************************************************
+2020-07-03 22:04:22,603 p=17459 u=spectre n=ansible | TASK [Gathering Facts] ********************************************************************************************************************************************
+2020-07-03 22:04:33,191 p=17459 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change this. See https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information.
+
+2020-07-03 22:04:33,192 p=17459 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:04:33,202 p=17459 u=spectre n=ansible | TASK [config : Install and Update dependency packages] ************************************************************************************************************
+2020-07-03 22:04:41,978 p=17459 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:04:41,986 p=17459 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] ******************************************************************************************************************************
+2020-07-03 22:04:51,369 p=17459 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:04:51,378 p=17459 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] *************************************************************************************************************************
+2020-07-03 22:05:04,475 p=17459 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 22:05:04,484 p=17459 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] *******************************************************************************************************************************
+2020-07-03 22:05:13,079 p=17459 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 22:05:13,089 p=17459 u=spectre n=ansible | TASK [vpn : Register softether vpn server to systemd] *************************************************************************************************************
+2020-07-03 22:05:23,150 p=17459 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:05:23,159 p=17459 u=spectre n=ansible | TASK [vpn : Reload service] ***************************************************************************************************************************************
+2020-07-03 22:05:28,949 p=17459 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 22:05:28,960 p=17459 u=spectre n=ansible | TASK [vpn : Restart and enable] ***********************************************************************************************************************************
+2020-07-03 22:05:34,916 p=17459 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:05:34,925 p=17459 u=spectre n=ansible | TASK [vpn : Copy config file] *************************************************************************************************************************************
+2020-07-03 22:05:48,816 p=17459 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:05:48,824 p=17459 u=spectre n=ansible | TASK [vpn : Configure softether vpn server] ***********************************************************************************************************************
+2020-07-03 22:05:54,586 p=17459 u=spectre n=ansible | changed: [54.95.40.115] => (item=cd /opt/softether/vpnserver)
+2020-07-03 22:06:00,080 p=17459 u=spectre n=ansible | failed: [54.95.40.115] (item=./vpncmd localhost /server /PASSWORD: /CMD ConfigSet config) => {"ansible_loop_var": "item", "changed": false, "cmd": "./vpncmd localhost /server /PASSWORD: /CMD ConfigSet config", "item": "./vpncmd localhost /server /PASSWORD: /CMD ConfigSet config", "msg": "[Errno 2] No such file or directory", "rc": 2}
+2020-07-03 22:06:00,083 p=17459 u=spectre n=ansible | PLAY RECAP ********************************************************************************************************************************************************
+2020-07-03 22:06:00,083 p=17459 u=spectre n=ansible | 54.95.40.115               : ok=9    changed=3    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-07-03 22:10:41,034 p=18472 u=spectre n=ansible | PLAY [vpn_servers] ************************************************************************************************************************************************
+2020-07-03 22:10:41,052 p=18472 u=spectre n=ansible | TASK [Gathering Facts] ********************************************************************************************************************************************
+2020-07-03 22:10:44,666 p=18472 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change this. See https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information.
+
+2020-07-03 22:10:44,666 p=18472 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:10:44,675 p=18472 u=spectre n=ansible | TASK [config : Install and Update dependency packages] ************************************************************************************************************
+2020-07-03 22:10:49,675 p=18472 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:10:49,683 p=18472 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] ******************************************************************************************************************************
+2020-07-03 22:10:52,190 p=18472 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:10:52,201 p=18472 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] *************************************************************************************************************************
+2020-07-03 22:10:56,012 p=18472 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 22:10:56,021 p=18472 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] *******************************************************************************************************************************
+2020-07-03 22:11:00,327 p=18472 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 22:11:00,336 p=18472 u=spectre n=ansible | TASK [vpn : Register softether vpn server to systemd] *************************************************************************************************************
+2020-07-03 22:11:03,500 p=18472 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:11:03,512 p=18472 u=spectre n=ansible | TASK [vpn : Reload service] ***************************************************************************************************************************************
+2020-07-03 22:11:05,948 p=18472 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 22:11:05,958 p=18472 u=spectre n=ansible | TASK [vpn : Restart and enable] ***********************************************************************************************************************************
+2020-07-03 22:11:08,391 p=18472 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:11:08,400 p=18472 u=spectre n=ansible | TASK [vpn : Copy config file] *************************************************************************************************************************************
+2020-07-03 22:11:12,696 p=18472 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:11:12,704 p=18472 u=spectre n=ansible | TASK [vpn : Configure softether vpn server] ***********************************************************************************************************************
+2020-07-03 22:11:13,811 p=18472 u=spectre n=ansible | changed: [54.95.40.115] => (item=cd /opt/softether/vpnserver)
+2020-07-03 22:14:13,746 p=18472 u=spectre n=ansible |  [ERROR]: User interrupted execution
+
+2020-07-03 22:20:31,233 p=20094 u=spectre n=ansible | PLAY [vpn_servers] ************************************************************************************************************************************************
+2020-07-03 22:20:31,250 p=20094 u=spectre n=ansible | TASK [Gathering Facts] ********************************************************************************************************************************************
+2020-07-03 22:20:40,303 p=20094 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change this. See https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information.
+
+2020-07-03 22:20:40,304 p=20094 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:20:40,312 p=20094 u=spectre n=ansible | TASK [config : Install and Update dependency packages] ************************************************************************************************************
+2020-07-03 22:20:46,990 p=20094 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:20:46,998 p=20094 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] ******************************************************************************************************************************
+2020-07-03 22:20:51,496 p=20094 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:20:51,504 p=20094 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] *************************************************************************************************************************
+2020-07-03 22:21:01,390 p=20094 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 22:21:01,397 p=20094 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] *******************************************************************************************************************************
+2020-07-03 22:21:08,599 p=20094 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 22:21:08,607 p=20094 u=spectre n=ansible | TASK [vpn : Register softether vpn server to systemd] *************************************************************************************************************
+2020-07-03 22:21:14,639 p=20094 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:21:14,648 p=20094 u=spectre n=ansible | TASK [vpn : Reload service] ***************************************************************************************************************************************
+2020-07-03 22:21:19,248 p=20094 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 22:21:19,258 p=20094 u=spectre n=ansible | TASK [vpn : Restart and enable] ***********************************************************************************************************************************
+2020-07-03 22:21:27,133 p=20094 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:21:27,141 p=20094 u=spectre n=ansible | TASK [vpn : Copy config file] *************************************************************************************************************************************
+2020-07-03 22:21:44,849 p=20094 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:21:44,857 p=20094 u=spectre n=ansible | TASK [vpn : Copy config shell] ************************************************************************************************************************************
+2020-07-03 22:22:00,649 p=20094 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 22:22:00,658 p=20094 u=spectre n=ansible | TASK [vpn : Exec shell script] ************************************************************************************************************************************
+2020-07-03 22:22:04,715 p=20094 u=spectre n=ansible | fatal: [54.95.40.115]: FAILED! => {"changed": false, "cmd": "/opt/softether/vpnserver/sever_config.sh", "msg": "[Errno 2] No such file or directory", "rc": 2}
+2020-07-03 22:22:04,717 p=20094 u=spectre n=ansible | PLAY RECAP ********************************************************************************************************************************************************
+2020-07-03 22:22:04,718 p=20094 u=spectre n=ansible | 54.95.40.115               : ok=10   changed=4    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-07-03 22:24:18,448 p=20837 u=spectre n=ansible | PLAY [vpn_servers] ************************************************************************************************************************************************
+2020-07-03 22:24:18,466 p=20837 u=spectre n=ansible | TASK [Gathering Facts] ********************************************************************************************************************************************
+2020-07-03 22:24:30,135 p=20837 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change this. See https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information.
+
+2020-07-03 22:24:30,135 p=20837 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:24:30,142 p=20837 u=spectre n=ansible | TASK [config : Install and Update dependency packages] ************************************************************************************************************
+2020-07-03 22:24:39,036 p=20837 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:24:39,046 p=20837 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] ******************************************************************************************************************************
+2020-07-03 22:24:44,764 p=20837 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:24:44,773 p=20837 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] *************************************************************************************************************************
+2020-07-03 22:24:57,180 p=20837 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 22:24:57,188 p=20837 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] *******************************************************************************************************************************
+2020-07-03 22:25:05,199 p=20837 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 22:25:05,207 p=20837 u=spectre n=ansible | TASK [vpn : Register softether vpn server to systemd] *************************************************************************************************************
+2020-07-03 22:25:12,012 p=20837 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:25:12,020 p=20837 u=spectre n=ansible | TASK [vpn : Reload service] ***************************************************************************************************************************************
+2020-07-03 22:25:16,311 p=20837 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 22:25:16,320 p=20837 u=spectre n=ansible | TASK [vpn : Restart and enable] ***********************************************************************************************************************************
+2020-07-03 22:25:21,637 p=20837 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:25:21,646 p=20837 u=spectre n=ansible | TASK [vpn : Copy config file] *************************************************************************************************************************************
+2020-07-03 22:25:33,514 p=20837 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:25:33,524 p=20837 u=spectre n=ansible | TASK [vpn : Copy config shell] ************************************************************************************************************************************
+2020-07-03 22:25:45,126 p=20837 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:25:45,133 p=20837 u=spectre n=ansible | TASK [vpn : Exec shell script] ************************************************************************************************************************************
+2020-07-03 22:25:51,555 p=20837 u=spectre n=ansible | fatal: [54.95.40.115]: FAILED! => {"changed": false, "cmd": "/opt/softether/vpnserver/sever_config.sh", "msg": "[Errno 2] No such file or directory", "rc": 2}
+2020-07-03 22:25:51,556 p=20837 u=spectre n=ansible | PLAY RECAP ********************************************************************************************************************************************************
+2020-07-03 22:25:51,557 p=20837 u=spectre n=ansible | 54.95.40.115               : ok=10   changed=3    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-07-03 22:28:28,507 p=21695 u=spectre n=ansible | PLAY [vpn_servers] ************************************************************************************************************************************************
+2020-07-03 22:28:28,520 p=21695 u=spectre n=ansible | TASK [Gathering Facts] ********************************************************************************************************************************************
+2020-07-03 22:28:35,388 p=21695 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change this. See https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information.
+
+2020-07-03 22:28:35,389 p=21695 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:28:35,397 p=21695 u=spectre n=ansible | TASK [config : Install and Update dependency packages] ************************************************************************************************************
+2020-07-03 22:28:41,243 p=21695 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:28:41,252 p=21695 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] ******************************************************************************************************************************
+2020-07-03 22:28:45,703 p=21695 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:28:45,711 p=21695 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] *************************************************************************************************************************
+2020-07-03 22:28:57,200 p=21695 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 22:28:57,209 p=21695 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] *******************************************************************************************************************************
+2020-07-03 22:29:06,130 p=21695 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 22:29:06,138 p=21695 u=spectre n=ansible | TASK [vpn : Register softether vpn server to systemd] *************************************************************************************************************
+2020-07-03 22:29:15,554 p=21695 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:29:15,561 p=21695 u=spectre n=ansible | TASK [vpn : Reload service] ***************************************************************************************************************************************
+2020-07-03 22:29:21,394 p=21695 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 22:29:21,404 p=21695 u=spectre n=ansible | TASK [vpn : Restart and enable] ***********************************************************************************************************************************
+2020-07-03 22:29:27,711 p=21695 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:29:27,719 p=21695 u=spectre n=ansible | TASK [vpn : Copy config file] *************************************************************************************************************************************
+2020-07-03 22:29:43,076 p=21695 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 22:29:43,086 p=21695 u=spectre n=ansible | TASK [vpn : Copy config shell] ************************************************************************************************************************************
+2020-07-03 22:29:56,791 p=21695 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 22:29:56,800 p=21695 u=spectre n=ansible | TASK [vpn : Exec shell script] ************************************************************************************************************************************
+2020-07-03 22:30:03,753 p=21695 u=spectre n=ansible | fatal: [54.95.40.115]: FAILED! => {"changed": false, "cmd": "/opt/softether/vpnserver/sever_config.sh", "msg": "[Errno 2] No such file or directory", "rc": 2}
+2020-07-03 22:30:03,755 p=21695 u=spectre n=ansible | PLAY RECAP ********************************************************************************************************************************************************
+2020-07-03 22:30:03,756 p=21695 u=spectre n=ansible | 54.95.40.115               : ok=10   changed=5    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-07-03 22:30:45,475 p=22134 u=spectre n=ansible | PLAY [vpn_servers] ************************************************************************************************************************************************
+2020-07-03 22:30:45,512 p=22134 u=spectre n=ansible | TASK [Gathering Facts] ********************************************************************************************************************************************
+2020-07-03 22:30:54,245 p=22134 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change this. See https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information.
+
+2020-07-03 22:30:54,246 p=22134 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:30:54,254 p=22134 u=spectre n=ansible | TASK [config : Install and Update dependency packages] ************************************************************************************************************
+2020-07-03 22:31:03,332 p=22134 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:31:03,344 p=22134 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] ******************************************************************************************************************************
+2020-07-03 22:31:08,934 p=22134 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:31:08,944 p=22134 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] *************************************************************************************************************************
+2020-07-03 22:31:20,275 p=22134 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 22:31:20,283 p=22134 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] *******************************************************************************************************************************
+2020-07-03 22:31:28,666 p=22134 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 22:31:28,676 p=22134 u=spectre n=ansible | TASK [vpn : Register softether vpn server to systemd] *************************************************************************************************************
+2020-07-03 22:31:37,563 p=22134 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:31:37,571 p=22134 u=spectre n=ansible | TASK [vpn : Reload service] ***************************************************************************************************************************************
+2020-07-03 22:31:43,392 p=22134 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 22:31:43,400 p=22134 u=spectre n=ansible | TASK [vpn : Restart and enable] ***********************************************************************************************************************************
+2020-07-03 22:31:48,504 p=22134 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:31:48,513 p=22134 u=spectre n=ansible | TASK [vpn : Copy config file] *************************************************************************************************************************************
+2020-07-03 22:31:58,242 p=22134 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:31:58,249 p=22134 u=spectre n=ansible | TASK [vpn : Copy config shell] ************************************************************************************************************************************
+2020-07-03 22:32:10,425 p=22134 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:32:10,433 p=22134 u=spectre n=ansible | TASK [vpn : Exec shell script] ************************************************************************************************************************************
+2020-07-03 22:32:15,036 p=22134 u=spectre n=ansible | fatal: [54.95.40.115]: FAILED! => {"changed": false, "cmd": "/opt/softether/vpnserver/server_config.sh", "msg": "[Errno 13] Permission denied", "rc": 13}
+2020-07-03 22:32:15,038 p=22134 u=spectre n=ansible | PLAY RECAP ********************************************************************************************************************************************************
+2020-07-03 22:32:15,038 p=22134 u=spectre n=ansible | 54.95.40.115               : ok=10   changed=3    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-07-03 22:52:01,899 p=23445 u=spectre n=ansible | PLAY [vpn_servers] ************************************************************************************************************************************************
+2020-07-03 22:52:01,917 p=23445 u=spectre n=ansible | TASK [Gathering Facts] ********************************************************************************************************************************************
+2020-07-03 22:52:04,939 p=23445 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change this. See https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information.
+
+2020-07-03 22:52:04,939 p=23445 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:52:04,948 p=23445 u=spectre n=ansible | TASK [config : Install and Update dependency packages] ************************************************************************************************************
+2020-07-03 22:52:08,980 p=23445 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:52:08,989 p=23445 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] ******************************************************************************************************************************
+2020-07-03 22:52:11,285 p=23445 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:52:11,295 p=23445 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] *************************************************************************************************************************
+2020-07-03 22:52:15,942 p=23445 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 22:52:15,951 p=23445 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] *******************************************************************************************************************************
+2020-07-03 22:52:20,565 p=23445 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 22:52:20,575 p=23445 u=spectre n=ansible | TASK [vpn : Register softether vpn server to systemd] *************************************************************************************************************
+2020-07-03 22:52:25,235 p=23445 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:52:25,245 p=23445 u=spectre n=ansible | TASK [vpn : Reload service] ***************************************************************************************************************************************
+2020-07-03 22:52:26,929 p=23445 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 22:52:26,940 p=23445 u=spectre n=ansible | TASK [vpn : Restart and enable] ***********************************************************************************************************************************
+2020-07-03 22:52:29,277 p=23445 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:52:29,288 p=23445 u=spectre n=ansible | TASK [vpn : Copy config file] *************************************************************************************************************************************
+2020-07-03 22:52:36,949 p=23445 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 22:52:36,957 p=23445 u=spectre n=ansible | TASK [vpn : Copy config shell] ************************************************************************************************************************************
+2020-07-03 22:52:47,294 p=23445 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:52:47,302 p=23445 u=spectre n=ansible | TASK [vpn : Exec shell script] ************************************************************************************************************************************
+2020-07-03 22:52:53,178 p=23445 u=spectre n=ansible | fatal: [54.95.40.115]: FAILED! => {"changed": false, "cmd": "/opt/softether/vpnserver/server_config.sh", "msg": "[Errno 8] Exec format error", "rc": 8}
+2020-07-03 22:52:53,180 p=23445 u=spectre n=ansible | PLAY RECAP ********************************************************************************************************************************************************
+2020-07-03 22:52:53,180 p=23445 u=spectre n=ansible | 54.95.40.115               : ok=10   changed=4    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-07-03 22:55:48,460 p=24382 u=spectre n=ansible | PLAY [vpn_servers] ************************************************************************************************************************************************
+2020-07-03 22:55:48,477 p=24382 u=spectre n=ansible | TASK [Gathering Facts] ********************************************************************************************************************************************
+2020-07-03 22:56:02,377 p=24382 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change this. See https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information.
+
+2020-07-03 22:56:02,377 p=24382 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:56:02,388 p=24382 u=spectre n=ansible | TASK [config : Install and Update dependency packages] ************************************************************************************************************
+2020-07-03 22:56:11,895 p=24382 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:56:11,904 p=24382 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] ******************************************************************************************************************************
+2020-07-03 22:56:19,963 p=24382 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:56:19,973 p=24382 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] *************************************************************************************************************************
+2020-07-03 22:56:32,740 p=24382 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 22:56:32,749 p=24382 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] *******************************************************************************************************************************
+2020-07-03 22:56:41,490 p=24382 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 22:56:41,500 p=24382 u=spectre n=ansible | TASK [vpn : Register softether vpn server to systemd] *************************************************************************************************************
+2020-07-03 22:56:50,945 p=24382 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:56:50,954 p=24382 u=spectre n=ansible | TASK [vpn : Reload service] ***************************************************************************************************************************************
+2020-07-03 22:56:57,060 p=24382 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 22:56:57,069 p=24382 u=spectre n=ansible | TASK [vpn : Restart and enable] ***********************************************************************************************************************************
+2020-07-03 22:57:03,022 p=24382 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:57:03,035 p=24382 u=spectre n=ansible | TASK [vpn : Copy config file] *************************************************************************************************************************************
+2020-07-03 22:57:15,179 p=24382 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 22:57:15,187 p=24382 u=spectre n=ansible | TASK [vpn : Copy config shell] ************************************************************************************************************************************
+2020-07-03 22:57:29,138 p=24382 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 22:57:29,147 p=24382 u=spectre n=ansible | TASK [vpn : Exec shell script] ************************************************************************************************************************************
+2020-07-03 22:57:34,228 p=24382 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 22:57:34,230 p=24382 u=spectre n=ansible | PLAY RECAP ********************************************************************************************************************************************************
+2020-07-03 22:57:34,230 p=24382 u=spectre n=ansible | 54.95.40.115               : ok=11   changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-07-03 23:00:00,123 p=25305 u=spectre n=ansible | PLAY [vpn_servers] ************************************************************************************************************************************************
+2020-07-03 23:00:00,138 p=25305 u=spectre n=ansible | TASK [Gathering Facts] ********************************************************************************************************************************************
+2020-07-03 23:00:13,674 p=25305 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change this. See https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information.
+
+2020-07-03 23:00:13,675 p=25305 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 23:00:13,682 p=25305 u=spectre n=ansible | TASK [config : Install and Update dependency packages] ************************************************************************************************************
+2020-07-03 23:00:23,088 p=25305 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 23:00:23,096 p=25305 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] ******************************************************************************************************************************
+2020-07-03 23:00:32,099 p=25305 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 23:00:32,107 p=25305 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] *************************************************************************************************************************
+2020-07-03 23:00:45,790 p=25305 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 23:00:45,798 p=25305 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] *******************************************************************************************************************************
+2020-07-03 23:00:52,683 p=25305 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 23:00:52,691 p=25305 u=spectre n=ansible | TASK [vpn : Register softether vpn server to systemd] *************************************************************************************************************
+2020-07-03 23:01:01,384 p=25305 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 23:01:01,392 p=25305 u=spectre n=ansible | TASK [vpn : Reload service] ***************************************************************************************************************************************
+2020-07-03 23:01:05,891 p=25305 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 23:01:05,900 p=25305 u=spectre n=ansible | TASK [vpn : Restart and enable] ***********************************************************************************************************************************
+2020-07-03 23:01:09,886 p=25305 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 23:01:09,896 p=25305 u=spectre n=ansible | TASK [vpn : Copy config file] *************************************************************************************************************************************
+2020-07-03 23:01:18,350 p=25305 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 23:01:18,357 p=25305 u=spectre n=ansible | TASK [vpn : Copy config shell] ************************************************************************************************************************************
+2020-07-03 23:01:27,298 p=25305 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-03 23:01:27,306 p=25305 u=spectre n=ansible | TASK [vpn : Exec shell script] ************************************************************************************************************************************
+2020-07-03 23:01:32,518 p=25305 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-03 23:01:32,526 p=25305 u=spectre n=ansible | TASK [vpn : Configure softether vpn server] ***********************************************************************************************************************
+2020-07-03 23:01:37,201 p=25305 u=spectre n=ansible | changed: [54.95.40.115] => (item=cd /opt/softether/vpnserver)
+2020-07-03 23:02:11,260 p=25305 u=spectre n=ansible |  [ERROR]: User interrupted execution
+
+2020-07-04 01:09:07,864 p=57189 u=spectre n=ansible | PLAY [vpn_servers] *********************************************************************
+2020-07-04 01:09:07,883 p=57189 u=spectre n=ansible | TASK [Gathering Facts] *****************************************************************
+2020-07-04 01:09:11,094 p=57189 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python interpreter
+could change this. See
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html
+for more information.
+
+2020-07-04 01:09:11,095 p=57189 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 01:09:11,104 p=57189 u=spectre n=ansible | TASK [config : Install and Update dependency packages] *********************************
+2020-07-04 01:09:15,106 p=57189 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 01:09:15,113 p=57189 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] ***************************************************
+2020-07-04 01:09:16,767 p=57189 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 01:09:16,777 p=57189 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] **********************************************
+2020-07-04 01:09:20,523 p=57189 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 01:09:20,530 p=57189 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] ****************************************************
+2020-07-04 01:09:24,403 p=57189 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 01:09:24,414 p=57189 u=spectre n=ansible | TASK [vpn : Register softether vpn server to systemd] **********************************
+2020-07-04 01:09:26,961 p=57189 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 01:09:26,971 p=57189 u=spectre n=ansible | TASK [vpn : Reload service] ************************************************************
+2020-07-04 01:09:28,682 p=57189 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 01:09:28,692 p=57189 u=spectre n=ansible | TASK [vpn : Restart and enable] ********************************************************
+2020-07-04 01:09:31,360 p=57189 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 01:09:31,368 p=57189 u=spectre n=ansible | TASK [vpn : Copy config file] **********************************************************
+2020-07-04 01:09:34,314 p=57189 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 01:09:34,321 p=57189 u=spectre n=ansible | TASK [vpn : Copy config shell] *********************************************************
+2020-07-04 01:09:37,240 p=57189 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 01:09:37,248 p=57189 u=spectre n=ansible | TASK [vpn : Exec shell script] *********************************************************
+2020-07-04 01:09:38,751 p=57189 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 01:09:38,759 p=57189 u=spectre n=ansible | TASK [vpn : Create Admin User Account] *************************************************
+2020-07-04 01:09:40,455 p=57189 u=spectre n=ansible | failed: [54.95.40.115] (item=UserCreate admin /GROUP: none /REALNAME: none /NOTE: test user) => {"ansible_loop_var": "item", "changed": true, "cmd": ["/opt/softether/vpnserver/vpncmd", "localhost", "/server", "/PASSWORD:", "/CMD", "UserCreate", "admin", "/GROUP:", "none", "/REALNAME:", "none", "/NOTE:", "test", "user"], "delta": "0:00:00.187322", "end": "2020-07-03 16:09:41.228057", "item": "UserCreate admin /GROUP: none /REALNAME: none /NOTE: test user", "msg": "non-zero return code", "rc": 1, "start": "2020-07-03 16:09:41.040735", "stderr": "", "stderr_lines": [], "stdout": "vpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ\nSoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)\nVersion 4.34 Build 9745   (Japanese)\nCompiled 2020/04/05 23:39:56 by buildsan at crosswin\nCopyright (c) SoftEther VPN Project. All Rights Reserved.\n\nエラーが発生しました。(エラーコード: 1)\nサーバーへの接続が失敗しました。ネットワーク接続や、接続先サーバーのアドレスやポート番号を確認してください。", "stdout_lines": ["vpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ", "SoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)", "Version 4.34 Build 9745   (Japanese)", "Compiled 2020/04/05 23:39:56 by buildsan at crosswin", "Copyright (c) SoftEther VPN Project. All Rights Reserved.", "", "エラーが発生しました。(エラーコード: 1)", "サーバーへの接続が失敗しました。ネットワーク接続や、接続先サーバーのアドレスやポート番号を確認してください。"]}
+2020-07-04 01:09:41,951 p=57189 u=spectre n=ansible | failed: [54.95.40.115] (item=UserPasswordSet admin /PASSWORD:test) => {"ansible_loop_var": "item", "changed": true, "cmd": ["/opt/softether/vpnserver/vpncmd", "localhost", "/server", "/PASSWORD:", "/CMD", "UserPasswordSet", "admin", "/PASSWORD:test"], "delta": "0:00:00.193551", "end": "2020-07-03 16:09:42.702575", "item": "UserPasswordSet admin /PASSWORD:test", "msg": "non-zero return code", "rc": 38, "start": "2020-07-03 16:09:42.509024", "stderr": "", "stderr_lines": [], "stdout": "vpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ\nSoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)\nVersion 4.34 Build 9745   (Japanese)\nCompiled 2020/04/05 23:39:56 by buildsan at crosswin\nCopyright (c) SoftEther VPN Project. All Rights Reserved.\n\nVPN Server \"localhost\" (ポート 443) に接続しました。\n\nVPN Server 全体の管理権限があります。\n\nVPN Server>UserPasswordSet admin /PASSWORD:test\nUserPasswordSet コマンド - ユーザーの認証方法をパスワード認証に設定しパスワードを設定\nこのコマンドを実行する前に、Hub コマンドで管理対象の仮想 HUB を選択してください。", "stdout_lines": ["vpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ", "SoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)", "Version 4.34 Build 9745   (Japanese)", "Compiled 2020/04/05 23:39:56 by buildsan at crosswin", "Copyright (c) SoftEther VPN Project. All Rights Reserved.", "", "VPN Server \"localhost\" (ポート 443) に接続しました。", "", "VPN Server 全体の管理権限があります。", "", "VPN Server>UserPasswordSet admin /PASSWORD:test", "UserPasswordSet コマンド - ユーザーの認証方法をパスワード認証に設定しパスワードを設定", "このコマンドを実行する前に、Hub コマンドで管理対象の仮想 HUB を選択してください。"]}
+2020-07-04 01:09:41,955 p=57189 u=spectre n=ansible | PLAY RECAP *****************************************************************************
+2020-07-04 01:09:41,956 p=57189 u=spectre n=ansible | 54.95.40.115               : ok=11   changed=4    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-07-04 01:11:38,506 p=58938 u=spectre n=ansible | PLAY [vpn_servers] *********************************************************************
+2020-07-04 01:11:38,526 p=58938 u=spectre n=ansible | TASK [Gathering Facts] *****************************************************************
+2020-07-04 01:11:41,393 p=58938 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python interpreter
+could change this. See
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html
+for more information.
+
+2020-07-04 01:11:41,393 p=58938 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 01:11:41,402 p=58938 u=spectre n=ansible | TASK [config : Install and Update dependency packages] *********************************
+2020-07-04 01:11:45,329 p=58938 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 01:11:45,337 p=58938 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] ***************************************************
+2020-07-04 01:11:46,748 p=58938 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 01:11:46,758 p=58938 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] **********************************************
+2020-07-04 01:11:50,217 p=58938 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 01:11:50,228 p=58938 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] ****************************************************
+2020-07-04 01:11:54,093 p=58938 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 01:11:54,103 p=58938 u=spectre n=ansible | TASK [vpn : Register softether vpn server to systemd] **********************************
+2020-07-04 01:11:56,020 p=58938 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 01:11:56,030 p=58938 u=spectre n=ansible | TASK [vpn : Reload service] ************************************************************
+2020-07-04 01:11:57,495 p=58938 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 01:11:57,507 p=58938 u=spectre n=ansible | TASK [vpn : Restart and enable] ********************************************************
+2020-07-04 01:11:59,491 p=58938 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 01:11:59,503 p=58938 u=spectre n=ansible | TASK [vpn : Copy config file] **********************************************************
+2020-07-04 01:12:02,623 p=58938 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 01:12:02,630 p=58938 u=spectre n=ansible | TASK [vpn : Copy config shell] *********************************************************
+2020-07-04 01:12:05,232 p=58938 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 01:12:05,240 p=58938 u=spectre n=ansible | TASK [vpn : Exec shell script] *********************************************************
+2020-07-04 01:12:06,718 p=58938 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 01:12:06,727 p=58938 u=spectre n=ansible | TASK [vpn : Create Admin User Account] *************************************************
+2020-07-04 01:12:08,511 p=58938 u=spectre n=ansible | failed: [54.95.40.115] (item=UserCreate admin /GROUP: none /REALNAME: none /NOTE: test user) => {"ansible_loop_var": "item", "changed": true, "cmd": ["/opt/softether/vpnserver/vpncmd", "localhost", "/server", "/HUB:default", "/PASSWORD:", "/CMD", "UserCreate", "admin", "/GROUP:", "none", "/REALNAME:", "none", "/NOTE:", "test", "user"], "delta": "0:00:00.188036", "end": "2020-07-03 16:12:09.235360", "item": "UserCreate admin /GROUP: none /REALNAME: none /NOTE: test user", "msg": "non-zero return code", "rc": 1, "start": "2020-07-03 16:12:09.047324", "stderr": "", "stderr_lines": [], "stdout": "vpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ\nSoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)\nVersion 4.34 Build 9745   (Japanese)\nCompiled 2020/04/05 23:39:56 by buildsan at crosswin\nCopyright (c) SoftEther VPN Project. All Rights Reserved.\n\nエラーが発生しました。(エラーコード: 1)\nサーバーへの接続が失敗しました。ネットワーク接続や、接続先サーバーのアドレスやポート番号を確認してください。", "stdout_lines": ["vpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ", "SoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)", "Version 4.34 Build 9745   (Japanese)", "Compiled 2020/04/05 23:39:56 by buildsan at crosswin", "Copyright (c) SoftEther VPN Project. All Rights Reserved.", "", "エラーが発生しました。(エラーコード: 1)", "サーバーへの接続が失敗しました。ネットワーク接続や、接続先サーバーのアドレスやポート番号を確認してください。"]}
+2020-07-04 01:12:10,374 p=58938 u=spectre n=ansible | failed: [54.95.40.115] (item=UserPasswordSet admin /PASSWORD:test) => {"ansible_loop_var": "item", "changed": true, "cmd": ["/opt/softether/vpnserver/vpncmd", "localhost", "/server", "/HUB:default", "/PASSWORD:", "/CMD", "UserPasswordSet", "admin", "/PASSWORD:test"], "delta": "0:00:00.146165", "end": "2020-07-03 16:12:11.101708", "item": "UserPasswordSet admin /PASSWORD:test", "msg": "non-zero return code", "rc": 29, "start": "2020-07-03 16:12:10.955543", "stderr": "", "stderr_lines": [], "stdout": "vpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ\nSoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)\nVersion 4.34 Build 9745   (Japanese)\nCompiled 2020/04/05 23:39:56 by buildsan at crosswin\nCopyright (c) SoftEther VPN Project. All Rights Reserved.\n\nVPN Server \"localhost\" (ポート 443) に接続しました。\n\nVPN Server 内の仮想 HUB 'default' に対する管理権限があります。\n\nVPN Server/default>UserPasswordSet admin /PASSWORD:test\nUserPasswordSet コマンド - ユーザーの認証方法をパスワード認証に設定しパスワードを設定\nエラーが発生しました。(エラーコード: 29)\n指定されたオブジェクトが見つかりません。", "stdout_lines": ["vpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ", "SoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)", "Version 4.34 Build 9745   (Japanese)", "Compiled 2020/04/05 23:39:56 by buildsan at crosswin", "Copyright (c) SoftEther VPN Project. All Rights Reserved.", "", "VPN Server \"localhost\" (ポート 443) に接続しました。", "", "VPN Server 内の仮想 HUB 'default' に対する管理権限があります。", "", "VPN Server/default>UserPasswordSet admin /PASSWORD:test", "UserPasswordSet コマンド - ユーザーの認証方法をパスワード認証に設定しパスワードを設定", "エラーが発生しました。(エラーコード: 29)", "指定されたオブジェクトが見つかりません。"]}
+2020-07-04 01:12:10,378 p=58938 u=spectre n=ansible | PLAY RECAP *****************************************************************************
+2020-07-04 01:12:10,378 p=58938 u=spectre n=ansible | 54.95.40.115               : ok=11   changed=4    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-07-04 10:08:07,482 p=62769 u=spectre n=ansible | PLAY [vpn_servers] *********************************************************************
+2020-07-04 10:08:07,504 p=62769 u=spectre n=ansible | TASK [Gathering Facts] *****************************************************************
+2020-07-04 10:08:09,909 p=62769 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python interpreter
+could change this. See
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html
+for more information.
+
+2020-07-04 10:08:09,910 p=62769 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:08:09,918 p=62769 u=spectre n=ansible | TASK [config : Install and Update dependency packages] *********************************
+2020-07-04 10:08:13,450 p=62769 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:08:13,462 p=62769 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] ***************************************************
+2020-07-04 10:08:14,608 p=62769 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:08:14,620 p=62769 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] **********************************************
+2020-07-04 10:08:17,325 p=62769 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 10:08:17,333 p=62769 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] ****************************************************
+2020-07-04 10:08:20,780 p=62769 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 10:08:20,789 p=62769 u=spectre n=ansible | TASK [vpn : Register softether vpn server to systemd] **********************************
+2020-07-04 10:08:22,660 p=62769 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:08:22,669 p=62769 u=spectre n=ansible | TASK [vpn : Reload service] ************************************************************
+2020-07-04 10:08:24,035 p=62769 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 10:08:24,051 p=62769 u=spectre n=ansible | TASK [vpn : Restart and enable] ********************************************************
+2020-07-04 10:08:25,345 p=62769 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:08:25,354 p=62769 u=spectre n=ansible | TASK [vpn : Copy config file] **********************************************************
+2020-07-04 10:08:27,562 p=62769 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:08:27,571 p=62769 u=spectre n=ansible | TASK [vpn : Copy config shell] *********************************************************
+2020-07-04 10:08:29,638 p=62769 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:08:29,646 p=62769 u=spectre n=ansible | TASK [vpn : Exec shell script] *********************************************************
+2020-07-04 10:08:30,654 p=62769 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 10:08:30,661 p=62769 u=spectre n=ansible | TASK [vpn : Create Admin User Account] *************************************************
+2020-07-04 10:08:31,723 p=62769 u=spectre n=ansible | failed: [54.95.40.115] (item=UserCreate admin /GROUP: none /REALNAME: none /NOTE: test user) => {"ansible_loop_var": "item", "changed": true, "cmd": ["/opt/softether/vpnserver/vpncmd", "/server", "localhost", "/HUB:default", "/PASSWORD:", "/CMD", "UserCreate", "admin", "/GROUP:", "none", "/REALNAME:", "none", "/NOTE:", "test", "user"], "delta": "0:00:00.187171", "end": "2020-07-04 01:08:33.643622", "item": "UserCreate admin /GROUP: none /REALNAME: none /NOTE: test user", "msg": "non-zero return code", "rc": 1, "start": "2020-07-04 01:08:33.456451", "stderr": "", "stderr_lines": [], "stdout": "vpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ\nSoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)\nVersion 4.34 Build 9745   (Japanese)\nCompiled 2020/04/05 23:39:56 by buildsan at crosswin\nCopyright (c) SoftEther VPN Project. All Rights Reserved.\n\nエラーが発生しました。(エラーコード: 1)\nサーバーへの接続が失敗しました。ネットワーク接続や、接続先サーバーのアドレスやポート番号を確認してください。", "stdout_lines": ["vpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ", "SoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)", "Version 4.34 Build 9745   (Japanese)", "Compiled 2020/04/05 23:39:56 by buildsan at crosswin", "Copyright (c) SoftEther VPN Project. All Rights Reserved.", "", "エラーが発生しました。(エラーコード: 1)", "サーバーへの接続が失敗しました。ネットワーク接続や、接続先サーバーのアドレスやポート番号を確認してください。"]}
+2020-07-04 10:08:32,738 p=62769 u=spectre n=ansible | failed: [54.95.40.115] (item=UserPasswordSet admin /PASSWORD:test) => {"ansible_loop_var": "item", "changed": true, "cmd": ["/opt/softether/vpnserver/vpncmd", "/server", "localhost", "/HUB:default", "/PASSWORD:", "/CMD", "UserPasswordSet", "admin", "/PASSWORD:test"], "delta": "0:00:00.146740", "end": "2020-07-04 01:08:34.651047", "item": "UserPasswordSet admin /PASSWORD:test", "msg": "non-zero return code", "rc": 29, "start": "2020-07-04 01:08:34.504307", "stderr": "", "stderr_lines": [], "stdout": "vpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ\nSoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)\nVersion 4.34 Build 9745   (Japanese)\nCompiled 2020/04/05 23:39:56 by buildsan at crosswin\nCopyright (c) SoftEther VPN Project. All Rights Reserved.\n\nVPN Server \"localhost\" (ポート 443) に接続しました。\n\nVPN Server 内の仮想 HUB 'default' に対する管理権限があります。\n\nVPN Server/default>UserPasswordSet admin /PASSWORD:test\nUserPasswordSet コマンド - ユーザーの認証方法をパスワード認証に設定しパスワードを設定\nエラーが発生しました。(エラーコード: 29)\n指定されたオブジェクトが見つかりません。", "stdout_lines": ["vpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ", "SoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)", "Version 4.34 Build 9745   (Japanese)", "Compiled 2020/04/05 23:39:56 by buildsan at crosswin", "Copyright (c) SoftEther VPN Project. All Rights Reserved.", "", "VPN Server \"localhost\" (ポート 443) に接続しました。", "", "VPN Server 内の仮想 HUB 'default' に対する管理権限があります。", "", "VPN Server/default>UserPasswordSet admin /PASSWORD:test", "UserPasswordSet コマンド - ユーザーの認証方法をパスワード認証に設定しパスワードを設定", "エラーが発生しました。(エラーコード: 29)", "指定されたオブジェクトが見つかりません。"]}
+2020-07-04 10:08:32,748 p=62769 u=spectre n=ansible | PLAY RECAP *****************************************************************************
+2020-07-04 10:08:32,749 p=62769 u=spectre n=ansible | 54.95.40.115               : ok=11   changed=4    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-07-04 10:14:10,556 p=65382 u=spectre n=ansible | PLAY [vpn_servers] *********************************************************************
+2020-07-04 10:14:10,570 p=65382 u=spectre n=ansible | TASK [Gathering Facts] *****************************************************************
+2020-07-04 10:14:12,837 p=65382 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python interpreter
+could change this. See
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html
+for more information.
+
+2020-07-04 10:14:12,838 p=65382 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:14:12,845 p=65382 u=spectre n=ansible | TASK [config : Install and Update dependency packages] *********************************
+2020-07-04 10:14:16,328 p=65382 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:14:16,337 p=65382 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] ***************************************************
+2020-07-04 10:14:17,450 p=65382 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:14:17,458 p=65382 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] **********************************************
+2020-07-04 10:14:20,858 p=65382 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 10:14:20,866 p=65382 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] ****************************************************
+2020-07-04 10:14:24,828 p=65382 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 10:14:24,837 p=65382 u=spectre n=ansible | TASK [vpn : Register softether vpn server to systemd] **********************************
+2020-07-04 10:14:26,503 p=65382 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:14:26,511 p=65382 u=spectre n=ansible | TASK [vpn : Reload service] ************************************************************
+2020-07-04 10:14:27,626 p=65382 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 10:14:27,635 p=65382 u=spectre n=ansible | TASK [vpn : Restart and enable] ********************************************************
+2020-07-04 10:14:29,274 p=65382 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:14:29,282 p=65382 u=spectre n=ansible | TASK [vpn : Copy config file] **********************************************************
+2020-07-04 10:14:32,675 p=65382 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:14:32,683 p=65382 u=spectre n=ansible | TASK [vpn : Copy config shell] *********************************************************
+2020-07-04 10:14:35,120 p=65382 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:14:35,128 p=65382 u=spectre n=ansible | TASK [vpn : Exec shell script] *********************************************************
+2020-07-04 10:14:36,320 p=65382 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 10:14:36,328 p=65382 u=spectre n=ansible | TASK [vpn : Create Admin User Account] *************************************************
+2020-07-04 10:14:37,778 p=65382 u=spectre n=ansible | failed: [54.95.40.115] (item=UserCreate admin /GROUP:none /REALNAME:none /NOTE:test_user) => {"ansible_loop_var": "item", "changed": true, "cmd": ["/opt/softether/vpnserver/vpncmd", "/server", "localhost", "/HUB:default", "/PASSWORD:", "/CMD", "UserCreate", "admin", "/GROUP:none", "/REALNAME:none", "/NOTE:test_user"], "delta": "0:00:00.186975", "end": "2020-07-04 01:14:39.567656", "item": "UserCreate admin /GROUP:none /REALNAME:none /NOTE:test_user", "msg": "non-zero return code", "rc": 1, "start": "2020-07-04 01:14:39.380681", "stderr": "", "stderr_lines": [], "stdout": "vpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ\nSoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)\nVersion 4.34 Build 9745   (Japanese)\nCompiled 2020/04/05 23:39:56 by buildsan at crosswin\nCopyright (c) SoftEther VPN Project. All Rights Reserved.\n\nエラーが発生しました。(エラーコード: 1)\nサーバーへの接続が失敗しました。ネットワーク接続や、接続先サーバーのアドレスやポート番号を確認してください。", "stdout_lines": ["vpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ", "SoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)", "Version 4.34 Build 9745   (Japanese)", "Compiled 2020/04/05 23:39:56 by buildsan at crosswin", "Copyright (c) SoftEther VPN Project. All Rights Reserved.", "", "エラーが発生しました。(エラーコード: 1)", "サーバーへの接続が失敗しました。ネットワーク接続や、接続先サーバーのアドレスやポート番号を確認してください。"]}
+2020-07-04 10:14:38,927 p=65382 u=spectre n=ansible | failed: [54.95.40.115] (item=UserPasswordSet admin /PASSWORD:test) => {"ansible_loop_var": "item", "changed": true, "cmd": ["/opt/softether/vpnserver/vpncmd", "/server", "localhost", "/HUB:default", "/PASSWORD:", "/CMD", "UserPasswordSet", "admin", "/PASSWORD:test"], "delta": "0:00:00.148746", "end": "2020-07-04 01:14:40.835100", "item": "UserPasswordSet admin /PASSWORD:test", "msg": "non-zero return code", "rc": 29, "start": "2020-07-04 01:14:40.686354", "stderr": "", "stderr_lines": [], "stdout": "vpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ\nSoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)\nVersion 4.34 Build 9745   (Japanese)\nCompiled 2020/04/05 23:39:56 by buildsan at crosswin\nCopyright (c) SoftEther VPN Project. All Rights Reserved.\n\nVPN Server \"localhost\" (ポート 443) に接続しました。\n\nVPN Server 内の仮想 HUB 'default' に対する管理権限があります。\n\nVPN Server/default>UserPasswordSet admin /PASSWORD:test\nUserPasswordSet コマンド - ユーザーの認証方法をパスワード認証に設定しパスワードを設定\nエラーが発生しました。(エラーコード: 29)\n指定されたオブジェクトが見つかりません。", "stdout_lines": ["vpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ", "SoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)", "Version 4.34 Build 9745   (Japanese)", "Compiled 2020/04/05 23:39:56 by buildsan at crosswin", "Copyright (c) SoftEther VPN Project. All Rights Reserved.", "", "VPN Server \"localhost\" (ポート 443) に接続しました。", "", "VPN Server 内の仮想 HUB 'default' に対する管理権限があります。", "", "VPN Server/default>UserPasswordSet admin /PASSWORD:test", "UserPasswordSet コマンド - ユーザーの認証方法をパスワード認証に設定しパスワードを設定", "エラーが発生しました。(エラーコード: 29)", "指定されたオブジェクトが見つかりません。"]}
+2020-07-04 10:14:38,931 p=65382 u=spectre n=ansible | PLAY RECAP *****************************************************************************
+2020-07-04 10:14:38,931 p=65382 u=spectre n=ansible | 54.95.40.115               : ok=11   changed=4    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-07-04 10:15:23,170 p=66283 u=spectre n=ansible | PLAY [vpn_servers] *********************************************************************
+2020-07-04 10:15:23,183 p=66283 u=spectre n=ansible | TASK [Gathering Facts] *****************************************************************
+2020-07-04 10:15:25,246 p=66283 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python interpreter
+could change this. See
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html
+for more information.
+
+2020-07-04 10:15:25,246 p=66283 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:15:25,253 p=66283 u=spectre n=ansible | TASK [config : Install and Update dependency packages] *********************************
+2020-07-04 10:15:28,841 p=66283 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:15:28,849 p=66283 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] ***************************************************
+2020-07-04 10:15:29,861 p=66283 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:15:29,869 p=66283 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] **********************************************
+2020-07-04 10:15:33,042 p=66283 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 10:15:33,054 p=66283 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] ****************************************************
+2020-07-04 10:15:36,873 p=66283 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 10:15:36,882 p=66283 u=spectre n=ansible | TASK [vpn : Register softether vpn server to systemd] **********************************
+2020-07-04 10:15:39,043 p=66283 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:15:39,052 p=66283 u=spectre n=ansible | TASK [vpn : Reload service] ************************************************************
+2020-07-04 10:15:40,415 p=66283 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 10:15:40,424 p=66283 u=spectre n=ansible | TASK [vpn : Restart and enable] ********************************************************
+2020-07-04 10:15:43,250 p=66283 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:15:43,259 p=66283 u=spectre n=ansible | TASK [vpn : Copy config file] **********************************************************
+2020-07-04 10:15:47,338 p=66283 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:15:47,346 p=66283 u=spectre n=ansible | TASK [vpn : Copy config shell] *********************************************************
+2020-07-04 10:15:50,684 p=66283 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:15:50,695 p=66283 u=spectre n=ansible | TASK [vpn : Exec shell script] *********************************************************
+2020-07-04 10:15:51,840 p=66283 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 10:15:51,847 p=66283 u=spectre n=ansible | TASK [vpn : Create Admin User Account] *************************************************
+2020-07-04 10:15:53,598 p=66283 u=spectre n=ansible | failed: [54.95.40.115] (item=UserCreate admin /GROUP:none /REALNAME:none /NOTE:test_user) => {"ansible_loop_var": "item", "changed": true, "cmd": ["/opt/softether/vpnserver/vpncmd", "/server", "127.0.0.1", "/HUB:default", "/PASSWORD:", "/CMD", "UserCreate", "admin", "/GROUP:none", "/REALNAME:none", "/NOTE:test_user"], "delta": "0:00:00.136000", "end": "2020-07-04 01:15:55.333025", "item": "UserCreate admin /GROUP:none /REALNAME:none /NOTE:test_user", "msg": "non-zero return code", "rc": 1, "start": "2020-07-04 01:15:55.197025", "stderr": "", "stderr_lines": [], "stdout": "vpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ\nSoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)\nVersion 4.34 Build 9745   (Japanese)\nCompiled 2020/04/05 23:39:56 by buildsan at crosswin\nCopyright (c) SoftEther VPN Project. All Rights Reserved.\n\nエラーが発生しました。(エラーコード: 1)\nサーバーへの接続が失敗しました。ネットワーク接続や、接続先サーバーのアドレスやポート番号を確認してください。", "stdout_lines": ["vpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ", "SoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)", "Version 4.34 Build 9745   (Japanese)", "Compiled 2020/04/05 23:39:56 by buildsan at crosswin", "Copyright (c) SoftEther VPN Project. All Rights Reserved.", "", "エラーが発生しました。(エラーコード: 1)", "サーバーへの接続が失敗しました。ネットワーク接続や、接続先サーバーのアドレスやポート番号を確認してください。"]}
+2020-07-04 10:15:54,859 p=66283 u=spectre n=ansible | failed: [54.95.40.115] (item=UserPasswordSet admin /PASSWORD:test) => {"ansible_loop_var": "item", "changed": true, "cmd": ["/opt/softether/vpnserver/vpncmd", "/server", "127.0.0.1", "/HUB:default", "/PASSWORD:", "/CMD", "UserPasswordSet", "admin", "/PASSWORD:test"], "delta": "0:00:00.141620", "end": "2020-07-04 01:15:56.663735", "item": "UserPasswordSet admin /PASSWORD:test", "msg": "non-zero return code", "rc": 29, "start": "2020-07-04 01:15:56.522115", "stderr": "", "stderr_lines": [], "stdout": "vpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ\nSoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)\nVersion 4.34 Build 9745   (Japanese)\nCompiled 2020/04/05 23:39:56 by buildsan at crosswin\nCopyright (c) SoftEther VPN Project. All Rights Reserved.\n\nVPN Server \"127.0.0.1\" (ポート 443) に接続しました。\n\nVPN Server 内の仮想 HUB 'default' に対する管理権限があります。\n\nVPN Server/default>UserPasswordSet admin /PASSWORD:test\nUserPasswordSet コマンド - ユーザーの認証方法をパスワード認証に設定しパスワードを設定\nエラーが発生しました。(エラーコード: 29)\n指定されたオブジェクトが見つかりません。", "stdout_lines": ["vpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ", "SoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)", "Version 4.34 Build 9745   (Japanese)", "Compiled 2020/04/05 23:39:56 by buildsan at crosswin", "Copyright (c) SoftEther VPN Project. All Rights Reserved.", "", "VPN Server \"127.0.0.1\" (ポート 443) に接続しました。", "", "VPN Server 内の仮想 HUB 'default' に対する管理権限があります。", "", "VPN Server/default>UserPasswordSet admin /PASSWORD:test", "UserPasswordSet コマンド - ユーザーの認証方法をパスワード認証に設定しパスワードを設定", "エラーが発生しました。(エラーコード: 29)", "指定されたオブジェクトが見つかりません。"]}
+2020-07-04 10:15:54,862 p=66283 u=spectre n=ansible | PLAY RECAP *****************************************************************************
+2020-07-04 10:15:54,863 p=66283 u=spectre n=ansible | 54.95.40.115               : ok=11   changed=4    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-07-04 10:22:40,439 p=71323 u=spectre n=ansible | PLAY [vpn_servers] *********************************************************************
+2020-07-04 10:22:40,452 p=71323 u=spectre n=ansible | TASK [Gathering Facts] *****************************************************************
+2020-07-04 10:22:43,575 p=71323 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python interpreter
+could change this. See
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html
+for more information.
+
+2020-07-04 10:22:43,575 p=71323 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:22:43,583 p=71323 u=spectre n=ansible | TASK [config : Install and Update dependency packages] *********************************
+2020-07-04 10:22:47,673 p=71323 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:22:47,681 p=71323 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] ***************************************************
+2020-07-04 10:22:49,160 p=71323 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:22:49,169 p=71323 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] **********************************************
+2020-07-04 10:22:53,626 p=71323 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 10:22:53,634 p=71323 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] ****************************************************
+2020-07-04 10:22:57,232 p=71323 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 10:22:57,240 p=71323 u=spectre n=ansible | TASK [vpn : Register softether vpn server to systemd] **********************************
+2020-07-04 10:22:59,000 p=71323 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:22:59,008 p=71323 u=spectre n=ansible | TASK [vpn : Reload service] ************************************************************
+2020-07-04 10:23:00,436 p=71323 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 10:23:00,444 p=71323 u=spectre n=ansible | TASK [vpn : Restart and enable] ********************************************************
+2020-07-04 10:23:02,039 p=71323 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:23:02,047 p=71323 u=spectre n=ansible | TASK [vpn : Copy config file] **********************************************************
+2020-07-04 10:23:05,355 p=71323 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:23:05,362 p=71323 u=spectre n=ansible | TASK [vpn : Copy config shell] *********************************************************
+2020-07-04 10:23:08,839 p=71323 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:23:08,850 p=71323 u=spectre n=ansible | TASK [vpn : Exec shell script] *********************************************************
+2020-07-04 10:23:11,087 p=71323 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 10:23:11,095 p=71323 u=spectre n=ansible | TASK [vpn : Create Admin User Account] *************************************************
+2020-07-04 10:23:12,479 p=71323 u=spectre n=ansible | failed: [54.95.40.115] (item=UserCreate admin /GROUP:none /REALNAME:none /NOTE:test_user) => {"ansible_loop_var": "item", "changed": true, "cmd": ["/opt/softether/vpnserver/vpncmd", "localhost", "/server", "/HUB:default", "/PASSWORD:", "/CMD", "UserCreate", "admin", "/GROUP:none", "/REALNAME:none", "/NOTE:test_user"], "delta": "0:00:00.189871", "end": "2020-07-04 01:23:14.368027", "item": "UserCreate admin /GROUP:none /REALNAME:none /NOTE:test_user", "msg": "non-zero return code", "rc": 1, "start": "2020-07-04 01:23:14.178156", "stderr": "", "stderr_lines": [], "stdout": "vpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ\nSoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)\nVersion 4.34 Build 9745   (Japanese)\nCompiled 2020/04/05 23:39:56 by buildsan at crosswin\nCopyright (c) SoftEther VPN Project. All Rights Reserved.\n\nエラーが発生しました。(エラーコード: 1)\nサーバーへの接続が失敗しました。ネットワーク接続や、接続先サーバーのアドレスやポート番号を確認してください。", "stdout_lines": ["vpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ", "SoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)", "Version 4.34 Build 9745   (Japanese)", "Compiled 2020/04/05 23:39:56 by buildsan at crosswin", "Copyright (c) SoftEther VPN Project. All Rights Reserved.", "", "エラーが発生しました。(エラーコード: 1)", "サーバーへの接続が失敗しました。ネットワーク接続や、接続先サーバーのアドレスやポート番号を確認してください。"]}
+2020-07-04 10:23:13,856 p=71323 u=spectre n=ansible | failed: [54.95.40.115] (item=UserPasswordSet admin /PASSWORD:test) => {"ansible_loop_var": "item", "changed": true, "cmd": ["/opt/softether/vpnserver/vpncmd", "localhost", "/server", "/HUB:default", "/PASSWORD:", "/CMD", "UserPasswordSet", "admin", "/PASSWORD:test"], "delta": "0:00:00.148819", "end": "2020-07-04 01:23:15.651133", "item": "UserPasswordSet admin /PASSWORD:test", "msg": "non-zero return code", "rc": 29, "start": "2020-07-04 01:23:15.502314", "stderr": "", "stderr_lines": [], "stdout": "vpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ\nSoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)\nVersion 4.34 Build 9745   (Japanese)\nCompiled 2020/04/05 23:39:56 by buildsan at crosswin\nCopyright (c) SoftEther VPN Project. All Rights Reserved.\n\nVPN Server \"localhost\" (ポート 443) に接続しました。\n\nVPN Server 内の仮想 HUB 'default' に対する管理権限があります。\n\nVPN Server/default>UserPasswordSet admin /PASSWORD:test\nUserPasswordSet コマンド - ユーザーの認証方法をパスワード認証に設定しパスワードを設定\nエラーが発生しました。(エラーコード: 29)\n指定されたオブジェクトが見つかりません。", "stdout_lines": ["vpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ", "SoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)", "Version 4.34 Build 9745   (Japanese)", "Compiled 2020/04/05 23:39:56 by buildsan at crosswin", "Copyright (c) SoftEther VPN Project. All Rights Reserved.", "", "VPN Server \"localhost\" (ポート 443) に接続しました。", "", "VPN Server 内の仮想 HUB 'default' に対する管理権限があります。", "", "VPN Server/default>UserPasswordSet admin /PASSWORD:test", "UserPasswordSet コマンド - ユーザーの認証方法をパスワード認証に設定しパスワードを設定", "エラーが発生しました。(エラーコード: 29)", "指定されたオブジェクトが見つかりません。"]}
+2020-07-04 10:23:13,860 p=71323 u=spectre n=ansible | PLAY RECAP *****************************************************************************
+2020-07-04 10:23:13,860 p=71323 u=spectre n=ansible | 54.95.40.115               : ok=11   changed=4    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-07-04 10:27:19,845 p=73983 u=spectre n=ansible | PLAY [vpn_servers] *********************************************************************
+2020-07-04 10:27:19,864 p=73983 u=spectre n=ansible | TASK [Gathering Facts] *****************************************************************
+2020-07-04 10:27:22,346 p=73983 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python interpreter
+could change this. See
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html
+for more information.
+
+2020-07-04 10:27:22,347 p=73983 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:27:22,355 p=73983 u=spectre n=ansible | TASK [config : Install and Update dependency packages] *********************************
+2020-07-04 10:27:25,843 p=73983 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:27:25,851 p=73983 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] ***************************************************
+2020-07-04 10:27:27,275 p=73983 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:27:27,283 p=73983 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] **********************************************
+2020-07-04 10:27:29,854 p=73983 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 10:27:29,862 p=73983 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] ****************************************************
+2020-07-04 10:27:33,279 p=73983 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 10:27:33,287 p=73983 u=spectre n=ansible | TASK [vpn : Register softether vpn server to systemd] **********************************
+2020-07-04 10:27:34,602 p=73983 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:27:34,611 p=73983 u=spectre n=ansible | TASK [vpn : Reload service] ************************************************************
+2020-07-04 10:27:35,746 p=73983 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 10:27:35,754 p=73983 u=spectre n=ansible | TASK [vpn : Restart and enable] ********************************************************
+2020-07-04 10:27:37,343 p=73983 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:27:37,376 p=73983 u=spectre n=ansible | TASK [vpn : Copy config file] **********************************************************
+2020-07-04 10:27:39,800 p=73983 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:27:39,807 p=73983 u=spectre n=ansible | TASK [vpn : Copy config shell] *********************************************************
+2020-07-04 10:27:41,753 p=73983 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:27:41,760 p=73983 u=spectre n=ansible | TASK [vpn : Exec shell script] *********************************************************
+2020-07-04 10:27:42,812 p=73983 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 10:27:42,820 p=73983 u=spectre n=ansible | TASK [vpn : Copy config shell] *********************************************************
+2020-07-04 10:27:45,720 p=73983 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 10:27:45,728 p=73983 u=spectre n=ansible | TASK [vpn : Exec shell script] *********************************************************
+2020-07-04 10:27:46,675 p=73983 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 10:27:46,677 p=73983 u=spectre n=ansible | PLAY RECAP *****************************************************************************
+2020-07-04 10:27:46,678 p=73983 u=spectre n=ansible | 54.95.40.115               : ok=13   changed=6    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-07-04 10:40:22,534 p=77616 u=spectre n=ansible | PLAY [vpn_servers] *********************************************************************
+2020-07-04 10:40:22,548 p=77616 u=spectre n=ansible | TASK [Gathering Facts] *****************************************************************
+2020-07-04 10:40:24,704 p=77616 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python interpreter
+could change this. See
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html
+for more information.
+
+2020-07-04 10:40:24,705 p=77616 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:40:24,712 p=77616 u=spectre n=ansible | TASK [config : Install and Update dependency packages] *********************************
+2020-07-04 10:40:28,370 p=77616 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:40:28,378 p=77616 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] ***************************************************
+2020-07-04 10:40:30,224 p=77616 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:40:30,232 p=77616 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] **********************************************
+2020-07-04 10:40:33,294 p=77616 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 10:40:33,302 p=77616 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] ****************************************************
+2020-07-04 10:40:37,045 p=77616 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 10:40:37,053 p=77616 u=spectre n=ansible | TASK [vpn : Register softether vpn server to systemd] **********************************
+2020-07-04 10:40:38,641 p=77616 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:40:38,649 p=77616 u=spectre n=ansible | TASK [vpn : Reload service] ************************************************************
+2020-07-04 10:40:39,816 p=77616 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 10:40:39,824 p=77616 u=spectre n=ansible | TASK [vpn : Restart and enable] ********************************************************
+2020-07-04 10:40:41,285 p=77616 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:40:41,293 p=77616 u=spectre n=ansible | TASK [vpn : Copy config file] **********************************************************
+2020-07-04 10:40:44,363 p=77616 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:40:44,371 p=77616 u=spectre n=ansible | TASK [vpn : Copy config shell] *********************************************************
+2020-07-04 10:40:46,837 p=77616 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:40:46,844 p=77616 u=spectre n=ansible | TASK [vpn : Exec shell script] *********************************************************
+2020-07-04 10:40:47,840 p=77616 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 10:40:47,847 p=77616 u=spectre n=ansible | TASK [vpn : Copy config shell] *********************************************************
+2020-07-04 10:40:50,559 p=77616 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 10:40:50,566 p=77616 u=spectre n=ansible | TASK [vpn : Exec shell script] *********************************************************
+2020-07-04 10:40:51,817 p=77616 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 10:40:51,820 p=77616 u=spectre n=ansible | PLAY RECAP *****************************************************************************
+2020-07-04 10:40:51,820 p=77616 u=spectre n=ansible | 54.95.40.115               : ok=13   changed=6    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-07-04 10:47:08,349 p=82095 u=spectre n=ansible | PLAY [vpn_servers] *********************************************************************
+2020-07-04 10:47:08,363 p=82095 u=spectre n=ansible | TASK [Gathering Facts] *****************************************************************
+2020-07-04 10:47:11,016 p=82095 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python interpreter
+could change this. See
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html
+for more information.
+
+2020-07-04 10:47:11,017 p=82095 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:47:11,024 p=82095 u=spectre n=ansible | TASK [config : Install and Update dependency packages] *********************************
+2020-07-04 10:47:14,884 p=82095 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:47:14,892 p=82095 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] ***************************************************
+2020-07-04 10:47:16,226 p=82095 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:47:16,234 p=82095 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] **********************************************
+2020-07-04 10:47:20,048 p=82095 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 10:47:20,056 p=82095 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] ****************************************************
+2020-07-04 10:47:23,906 p=82095 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 10:47:23,914 p=82095 u=spectre n=ansible | TASK [vpn : Register softether vpn server to systemd] **********************************
+2020-07-04 10:47:25,808 p=82095 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:47:25,816 p=82095 u=spectre n=ansible | TASK [vpn : Reload service] ************************************************************
+2020-07-04 10:47:26,975 p=82095 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 10:47:26,983 p=82095 u=spectre n=ansible | TASK [vpn : Restart and enable] ********************************************************
+2020-07-04 10:47:28,318 p=82095 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:47:28,325 p=82095 u=spectre n=ansible | TASK [vpn : Copy config file] **********************************************************
+2020-07-04 10:47:30,427 p=82095 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:47:30,434 p=82095 u=spectre n=ansible | TASK [vpn : Copy config shell] *********************************************************
+2020-07-04 10:47:32,366 p=82095 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:47:32,374 p=82095 u=spectre n=ansible | TASK [vpn : Exec shell script] *********************************************************
+2020-07-04 10:47:33,382 p=82095 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 10:47:33,389 p=82095 u=spectre n=ansible | TASK [vpn : Copy config shell] *********************************************************
+2020-07-04 10:47:36,072 p=82095 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 10:47:36,080 p=82095 u=spectre n=ansible | TASK [vpn : Exec shell script] *********************************************************
+2020-07-04 10:47:37,400 p=82095 u=spectre n=ansible | fatal: [54.95.40.115]: FAILED! => {"changed": true, "cmd": ["/opt/softether/vpnserver/create_admin.sh"], "delta": "0:00:00.427389", "end": "2020-07-04 01:47:39.468127", "msg": "non-zero return code", "rc": 52, "start": "2020-07-04 01:47:39.040738", "stderr": "", "stderr_lines": [], "stdout": "vpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ\nSoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)\nVersion 4.34 Build 9745   (Japanese)\nCompiled 2020/04/05 23:39:56 by buildsan at crosswin\nCopyright (c) SoftEther VPN Project. All Rights Reserved.\n\nVPN Server \"localhost\" (ポート 443) に接続しました。\n\nVPN Server 内の仮想 HUB 'default' に対する管理権限があります。\n\nVPN Server/default>usercreate admin /group:none /realname:none /note:test\nUserCreate コマンド - ユーザーの作成\nコマンドは正常に終了しました。\n\nvpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ\nSoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)\nVersion 4.34 Build 9745   (Japanese)\nCompiled 2020/04/05 23:39:56 by buildsan at crosswin\nCopyright (c) SoftEther VPN Project. All Rights Reserved.\n\nVPN Server \"localhost\" (ポート 443) に接続しました。\n\nVPN Server 内の仮想 HUB 'default' に対する管理権限があります。\n\nVPN Server/default>userpasswordset admin /password:test\nUserPasswordSet コマンド - ユーザーの認証方法をパスワード認証に設定しパスワードを設定\nコマンドは正常に終了しました。\n\nvpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ\nSoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)\nVersion 4.34 Build 9745   (Japanese)\nCompiled 2020/04/05 23:39:56 by buildsan at crosswin\nCopyright (c) SoftEther VPN Project. All Rights Reserved.\n\nVPN Server \"localhost\" (ポート 443) に接続しました。\n\nVPN Server 内の仮想 HUB 'default' に対する管理権限があります。\n\nVPN Server/default>IPsecEnable /L2TP:yes /L2TPRAW:no /ETHERIP:no /PSK:test /DEFAULTHUB:default\nIPsecEnable コマンド - IPsec VPN サーバー機能の有効化 / 無効化\nエラーが発生しました。(エラーコード: 52)\n権限が不足しています。", "stdout_lines": ["vpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ", "SoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)", "Version 4.34 Build 9745   (Japanese)", "Compiled 2020/04/05 23:39:56 by buildsan at crosswin", "Copyright (c) SoftEther VPN Project. All Rights Reserved.", "", "VPN Server \"localhost\" (ポート 443) に接続しました。", "", "VPN Server 内の仮想 HUB 'default' に対する管理権限があります。", "", "VPN Server/default>usercreate admin /group:none /realname:none /note:test", "UserCreate コマンド - ユーザーの作成", "コマンドは正常に終了しました。", "", "vpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ", "SoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)", "Version 4.34 Build 9745   (Japanese)", "Compiled 2020/04/05 23:39:56 by buildsan at crosswin", "Copyright (c) SoftEther VPN Project. All Rights Reserved.", "", "VPN Server \"localhost\" (ポート 443) に接続しました。", "", "VPN Server 内の仮想 HUB 'default' に対する管理権限があります。", "", "VPN Server/default>userpasswordset admin /password:test", "UserPasswordSet コマンド - ユーザーの認証方法をパスワード認証に設定しパスワードを設定", "コマンドは正常に終了しました。", "", "vpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ", "SoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)", "Version 4.34 Build 9745   (Japanese)", "Compiled 2020/04/05 23:39:56 by buildsan at crosswin", "Copyright (c) SoftEther VPN Project. All Rights Reserved.", "", "VPN Server \"localhost\" (ポート 443) に接続しました。", "", "VPN Server 内の仮想 HUB 'default' に対する管理権限があります。", "", "VPN Server/default>IPsecEnable /L2TP:yes /L2TPRAW:no /ETHERIP:no /PSK:test /DEFAULTHUB:default", "IPsecEnable コマンド - IPsec VPN サーバー機能の有効化 / 無効化", "エラーが発生しました。(エラーコード: 52)", "権限が不足しています。"]}
+2020-07-04 10:47:37,401 p=82095 u=spectre n=ansible | PLAY RECAP *****************************************************************************
+2020-07-04 10:47:37,402 p=82095 u=spectre n=ansible | 54.95.40.115               : ok=12   changed=5    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-07-04 10:49:02,052 p=83450 u=spectre n=ansible | PLAY [vpn_servers] *********************************************************************
+2020-07-04 10:49:02,065 p=83450 u=spectre n=ansible | TASK [Gathering Facts] *****************************************************************
+2020-07-04 10:49:04,626 p=83450 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python interpreter
+could change this. See
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html
+for more information.
+
+2020-07-04 10:49:04,626 p=83450 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:49:04,633 p=83450 u=spectre n=ansible | TASK [config : Install and Update dependency packages] *********************************
+2020-07-04 10:49:08,185 p=83450 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:49:08,193 p=83450 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] ***************************************************
+2020-07-04 10:49:09,155 p=83450 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:49:09,163 p=83450 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] **********************************************
+2020-07-04 10:49:11,932 p=83450 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 10:49:11,940 p=83450 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] ****************************************************
+2020-07-04 10:49:15,524 p=83450 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 10:49:15,532 p=83450 u=spectre n=ansible | TASK [vpn : Register softether vpn server to systemd] **********************************
+2020-07-04 10:49:17,179 p=83450 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:49:17,187 p=83450 u=spectre n=ansible | TASK [vpn : Reload service] ************************************************************
+2020-07-04 10:49:18,261 p=83450 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 10:49:18,269 p=83450 u=spectre n=ansible | TASK [vpn : Restart and enable] ********************************************************
+2020-07-04 10:49:19,494 p=83450 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:49:19,502 p=83450 u=spectre n=ansible | TASK [vpn : Copy config file] **********************************************************
+2020-07-04 10:49:21,743 p=83450 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:49:21,750 p=83450 u=spectre n=ansible | TASK [vpn : Copy config shell] *********************************************************
+2020-07-04 10:49:25,213 p=83450 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-04 10:49:25,221 p=83450 u=spectre n=ansible | TASK [vpn : Exec shell script] *********************************************************
+2020-07-04 10:49:26,222 p=83450 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 10:49:26,230 p=83450 u=spectre n=ansible | TASK [vpn : Copy config shell] *********************************************************
+2020-07-04 10:49:28,888 p=83450 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 10:49:28,897 p=83450 u=spectre n=ansible | TASK [vpn : Exec shell script] *********************************************************
+2020-07-04 10:49:30,454 p=83450 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-04 10:49:30,457 p=83450 u=spectre n=ansible | PLAY RECAP *****************************************************************************
+2020-07-04 10:49:30,457 p=83450 u=spectre n=ansible | 54.95.40.115               : ok=13   changed=6    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-07-05 17:09:45,795 p=61723 u=spectre n=ansible | PLAY [vpn_servers] *********************************************************************
+2020-07-05 17:09:45,819 p=61723 u=spectre n=ansible | TASK [Gathering Facts] *****************************************************************
+2020-07-05 17:09:48,405 p=61723 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python interpreter
+could change this. See
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html
+for more information.
+
+2020-07-05 17:09:48,406 p=61723 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-05 17:09:48,414 p=61723 u=spectre n=ansible | TASK [config : Install and Update dependency packages] *********************************
+2020-07-05 17:09:52,386 p=61723 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-05 17:09:52,395 p=61723 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] ***************************************************
+2020-07-05 17:09:53,745 p=61723 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-05 17:09:53,756 p=61723 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] **********************************************
+2020-07-05 17:09:57,509 p=61723 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-05 17:09:57,517 p=61723 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] ****************************************************
+2020-07-05 17:10:01,194 p=61723 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-05 17:10:01,203 p=61723 u=spectre n=ansible | TASK [vpn : Register softether vpn server to systemd] **********************************
+2020-07-05 17:10:03,111 p=61723 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-05 17:10:03,123 p=61723 u=spectre n=ansible | TASK [vpn : Reload service] ************************************************************
+2020-07-05 17:10:04,468 p=61723 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-05 17:10:04,480 p=61723 u=spectre n=ansible | TASK [vpn : Restart and enable] ********************************************************
+2020-07-05 17:10:06,130 p=61723 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-05 17:10:06,139 p=61723 u=spectre n=ansible | TASK [vpn : Copy config file] **********************************************************
+2020-07-05 17:10:09,494 p=61723 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-05 17:10:09,502 p=61723 u=spectre n=ansible | TASK [vpn : Copy config shell] *********************************************************
+2020-07-05 17:10:13,056 p=61723 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-05 17:10:13,064 p=61723 u=spectre n=ansible | TASK [vpn : Exec shell script] *********************************************************
+2020-07-05 17:10:14,515 p=61723 u=spectre n=ansible | fatal: [54.95.40.115]: FAILED! => {"changed": true, "cmd": ["/opt/softether/vpnserver/server_config.sh"], "delta": "0:00:00.342288", "end": "2020-07-05 08:10:14.933472", "msg": "non-zero return code", "rc": 51, "start": "2020-07-05 08:10:14.591184", "stderr": "", "stderr_lines": [], "stdout": "vpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ\nSoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)\nVersion 4.34 Build 9745   (Japanese)\nCompiled 2020/04/05 23:39:56 by buildsan at crosswin\nCopyright (c) SoftEther VPN Project. All Rights Reserved.\n\nVPN Server \"localhost\" (ポート 443) に接続しました。\n\nVPN Server 全体の管理権限があります。\n\nVPN Server>ConfigSet config\nConfigSet コマンド - VPN Server へのコンフィグレーションの書き込み\nコマンドは正常に終了しました。\n\nvpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ\nSoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)\nVersion 4.34 Build 9745   (Japanese)\nCompiled 2020/04/05 23:39:56 by buildsan at crosswin\nCopyright (c) SoftEther VPN Project. All Rights Reserved.\n\nエラーが発生しました。(エラーコード: 51)\n接続しようとしたユーザーのパスワードは空のため、リモートから接続を行うことはできません。空のパスワードを使っている場合、VPN Server のローカルコンピュータ localhost (127.0.0.1) 上からのみ接続できます。", "stdout_lines": ["vpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ", "SoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)", "Version 4.34 Build 9745   (Japanese)", "Compiled 2020/04/05 23:39:56 by buildsan at crosswin", "Copyright (c) SoftEther VPN Project. All Rights Reserved.", "", "VPN Server \"localhost\" (ポート 443) に接続しました。", "", "VPN Server 全体の管理権限があります。", "", "VPN Server>ConfigSet config", "ConfigSet コマンド - VPN Server へのコンフィグレーションの書き込み", "コマンドは正常に終了しました。", "", "vpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ", "SoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)", "Version 4.34 Build 9745   (Japanese)", "Compiled 2020/04/05 23:39:56 by buildsan at crosswin", "Copyright (c) SoftEther VPN Project. All Rights Reserved.", "", "エラーが発生しました。(エラーコード: 51)", "接続しようとしたユーザーのパスワードは空のため、リモートから接続を行うことはできません。空のパスワードを使っている場合、VPN Server のローカルコンピュータ localhost (127.0.0.1) 上からのみ接続できます。"]}
+2020-07-05 17:10:14,517 p=61723 u=spectre n=ansible | PLAY RECAP *****************************************************************************
+2020-07-05 17:10:14,517 p=61723 u=spectre n=ansible | 54.95.40.115               : ok=10   changed=4    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-07-05 17:12:03,135 p=63326 u=spectre n=ansible | PLAY [vpn_servers] *********************************************************************
+2020-07-05 17:12:03,155 p=63326 u=spectre n=ansible | TASK [Gathering Facts] *****************************************************************
+2020-07-05 17:12:06,543 p=63326 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python interpreter
+could change this. See
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html
+for more information.
+
+2020-07-05 17:12:06,544 p=63326 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-05 17:12:06,552 p=63326 u=spectre n=ansible | TASK [config : Install and Update dependency packages] *********************************
+2020-07-05 17:12:10,423 p=63326 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-05 17:12:10,432 p=63326 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] ***************************************************
+2020-07-05 17:12:11,844 p=63326 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-05 17:12:11,856 p=63326 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] **********************************************
+2020-07-05 17:12:16,067 p=63326 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-05 17:12:16,074 p=63326 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] ****************************************************
+2020-07-05 17:12:20,472 p=63326 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-05 17:12:20,482 p=63326 u=spectre n=ansible | TASK [vpn : Register softether vpn server to systemd] **********************************
+2020-07-05 17:12:22,780 p=63326 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-05 17:12:22,790 p=63326 u=spectre n=ansible | TASK [vpn : Reload service] ************************************************************
+2020-07-05 17:12:26,377 p=63326 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-05 17:12:26,387 p=63326 u=spectre n=ansible | TASK [vpn : Restart and enable] ********************************************************
+2020-07-05 17:12:29,110 p=63326 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-05 17:12:29,119 p=63326 u=spectre n=ansible | TASK [vpn : Copy config file] **********************************************************
+2020-07-05 17:12:33,724 p=63326 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-05 17:12:33,733 p=63326 u=spectre n=ansible | TASK [vpn : Copy config shell] *********************************************************
+2020-07-05 17:12:38,907 p=63326 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-05 17:12:38,915 p=63326 u=spectre n=ansible | TASK [vpn : Exec shell script] *********************************************************
+2020-07-05 17:12:40,606 p=63326 u=spectre n=ansible | fatal: [54.95.40.115]: FAILED! => {"changed": true, "cmd": ["/opt/softether/vpnserver/server_config.sh"], "delta": "0:00:00.343369", "end": "2020-07-05 08:12:40.886104", "msg": "non-zero return code", "rc": 38, "start": "2020-07-05 08:12:40.542735", "stderr": "", "stderr_lines": [], "stdout": "vpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ\nSoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)\nVersion 4.34 Build 9745   (Japanese)\nCompiled 2020/04/05 23:39:56 by buildsan at crosswin\nCopyright (c) SoftEther VPN Project. All Rights Reserved.\n\nVPN Server \"localhost\" (ポート 443) に接続しました。\n\nVPN Server 全体の管理権限があります。\n\nVPN Server>ConfigSet config\nConfigSet コマンド - VPN Server へのコンフィグレーションの書き込み\nコマンドは正常に終了しました。\n\nvpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ\nSoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)\nVersion 4.34 Build 9745   (Japanese)\nCompiled 2020/04/05 23:39:56 by buildsan at crosswin\nCopyright (c) SoftEther VPN Project. All Rights Reserved.\n\nVPN Server \"localhost\" (ポート 443) に接続しました。\n\nVPN Server 全体の管理権限があります。\n\nVPN Server>SetHubPassword /HUB:DEFAULT /PASSWORD:test\nSetHubPassword コマンド - 仮想 HUB の管理パスワードを設定する\nこのコマンドを実行する前に、Hub コマンドで管理対象の仮想 HUB を選択してください。", "stdout_lines": ["vpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ", "SoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)", "Version 4.34 Build 9745   (Japanese)", "Compiled 2020/04/05 23:39:56 by buildsan at crosswin", "Copyright (c) SoftEther VPN Project. All Rights Reserved.", "", "VPN Server \"localhost\" (ポート 443) に接続しました。", "", "VPN Server 全体の管理権限があります。", "", "VPN Server>ConfigSet config", "ConfigSet コマンド - VPN Server へのコンフィグレーションの書き込み", "コマンドは正常に終了しました。", "", "vpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ", "SoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)", "Version 4.34 Build 9745   (Japanese)", "Compiled 2020/04/05 23:39:56 by buildsan at crosswin", "Copyright (c) SoftEther VPN Project. All Rights Reserved.", "", "VPN Server \"localhost\" (ポート 443) に接続しました。", "", "VPN Server 全体の管理権限があります。", "", "VPN Server>SetHubPassword /HUB:DEFAULT /PASSWORD:test", "SetHubPassword コマンド - 仮想 HUB の管理パスワードを設定する", "このコマンドを実行する前に、Hub コマンドで管理対象の仮想 HUB を選択してください。"]}
+2020-07-05 17:12:40,608 p=63326 u=spectre n=ansible | PLAY RECAP *****************************************************************************
+2020-07-05 17:12:40,609 p=63326 u=spectre n=ansible | 54.95.40.115               : ok=10   changed=4    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-07-05 17:23:17,585 p=70568 u=spectre n=ansible | PLAY [vpn_servers] *********************************************************************
+2020-07-05 17:23:17,606 p=70568 u=spectre n=ansible | TASK [Gathering Facts] *****************************************************************
+2020-07-05 17:23:23,076 p=70568 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python interpreter
+could change this. See
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html
+for more information.
+
+2020-07-05 17:23:23,077 p=70568 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-05 17:23:23,086 p=70568 u=spectre n=ansible | TASK [config : Install and Update dependency packages] *********************************
+2020-07-05 17:23:27,600 p=70568 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-05 17:23:27,609 p=70568 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] ***************************************************
+2020-07-05 17:23:28,822 p=70568 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-05 17:23:28,830 p=70568 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] **********************************************
+2020-07-05 17:23:32,304 p=70568 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-05 17:23:32,313 p=70568 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] ****************************************************
+2020-07-05 17:23:36,115 p=70568 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-05 17:23:36,125 p=70568 u=spectre n=ansible | TASK [vpn : Register softether vpn server to systemd] **********************************
+2020-07-05 17:23:39,482 p=70568 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-05 17:23:39,492 p=70568 u=spectre n=ansible | TASK [vpn : Reload service] ************************************************************
+2020-07-05 17:23:41,391 p=70568 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-05 17:23:41,402 p=70568 u=spectre n=ansible | TASK [vpn : Restart and enable] ********************************************************
+2020-07-05 17:23:43,603 p=70568 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-05 17:23:43,612 p=70568 u=spectre n=ansible | TASK [vpn : Copy config file] **********************************************************
+2020-07-05 17:23:47,247 p=70568 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-05 17:23:47,254 p=70568 u=spectre n=ansible | TASK [vpn : Copy config shell] *********************************************************
+2020-07-05 17:23:50,974 p=70568 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-05 17:23:50,982 p=70568 u=spectre n=ansible | TASK [vpn : Exec shell script] *********************************************************
+2020-07-05 17:25:28,513 p=70568 u=spectre n=ansible |  [ERROR]: User interrupted execution
+
+2020-07-05 17:25:59,645 p=72428 u=spectre n=ansible | PLAY [vpn_servers] *********************************************************************
+2020-07-05 17:25:59,668 p=72428 u=spectre n=ansible | TASK [Gathering Facts] *****************************************************************
+2020-07-05 17:26:01,857 p=72428 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python interpreter
+could change this. See
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html
+for more information.
+
+2020-07-05 17:26:01,858 p=72428 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-05 17:26:01,865 p=72428 u=spectre n=ansible | TASK [config : Install and Update dependency packages] *********************************
+2020-07-05 17:26:06,464 p=72428 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-05 17:26:06,472 p=72428 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] ***************************************************
+2020-07-05 17:26:08,007 p=72428 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-05 17:26:08,018 p=72428 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] **********************************************
+2020-07-05 17:26:12,576 p=72428 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-05 17:26:12,585 p=72428 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] ****************************************************
+2020-07-05 17:26:16,362 p=72428 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-05 17:26:16,373 p=72428 u=spectre n=ansible | TASK [vpn : Register softether vpn server to systemd] **********************************
+2020-07-05 17:26:19,731 p=72428 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-05 17:26:19,741 p=72428 u=spectre n=ansible | TASK [vpn : Reload service] ************************************************************
+2020-07-05 17:26:21,490 p=72428 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-05 17:26:21,500 p=72428 u=spectre n=ansible | TASK [vpn : Restart and enable] ********************************************************
+2020-07-05 17:26:23,209 p=72428 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-05 17:26:23,218 p=72428 u=spectre n=ansible | TASK [vpn : Copy config file] **********************************************************
+2020-07-05 17:26:26,326 p=72428 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-05 17:26:26,334 p=72428 u=spectre n=ansible | TASK [vpn : Copy config shell] *********************************************************
+2020-07-05 17:26:29,322 p=72428 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-05 17:26:29,330 p=72428 u=spectre n=ansible | TASK [vpn : Exec shell script for configuration] ***************************************
+2020-07-05 17:26:31,145 p=72428 u=spectre n=ansible | fatal: [54.95.40.115]: FAILED! => {"changed": true, "cmd": ["/opt/softether/vpnserver/server_config.sh"], "delta": "0:00:00.344847", "end": "2020-07-05 08:26:31.570024", "msg": "non-zero return code", "rc": 51, "start": "2020-07-05 08:26:31.225177", "stderr": "", "stderr_lines": [], "stdout": "vpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ\nSoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)\nVersion 4.34 Build 9745   (Japanese)\nCompiled 2020/04/05 23:39:56 by buildsan at crosswin\nCopyright (c) SoftEther VPN Project. All Rights Reserved.\n\nVPN Server \"localhost\" (ポート 443) に接続しました。\n\nVPN Server 全体の管理権限があります。\n\nVPN Server>ConfigSet config\nConfigSet コマンド - VPN Server へのコンフィグレーションの書き込み\nコマンドは正常に終了しました。\n\nvpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ\nSoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)\nVersion 4.34 Build 9745   (Japanese)\nCompiled 2020/04/05 23:39:56 by buildsan at crosswin\nCopyright (c) SoftEther VPN Project. All Rights Reserved.\n\nエラーが発生しました。(エラーコード: 51)\n接続しようとしたユーザーのパスワードは空のため、リモートから接続を行うことはできません。空のパスワードを使っている場合、VPN Server のローカルコンピュータ localhost (127.0.0.1) 上からのみ接続できます。", "stdout_lines": ["vpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ", "SoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)", "Version 4.34 Build 9745   (Japanese)", "Compiled 2020/04/05 23:39:56 by buildsan at crosswin", "Copyright (c) SoftEther VPN Project. All Rights Reserved.", "", "VPN Server \"localhost\" (ポート 443) に接続しました。", "", "VPN Server 全体の管理権限があります。", "", "VPN Server>ConfigSet config", "ConfigSet コマンド - VPN Server へのコンフィグレーションの書き込み", "コマンドは正常に終了しました。", "", "vpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ", "SoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)", "Version 4.34 Build 9745   (Japanese)", "Compiled 2020/04/05 23:39:56 by buildsan at crosswin", "Copyright (c) SoftEther VPN Project. All Rights Reserved.", "", "エラーが発生しました。(エラーコード: 51)", "接続しようとしたユーザーのパスワードは空のため、リモートから接続を行うことはできません。空のパスワードを使っている場合、VPN Server のローカルコンピュータ localhost (127.0.0.1) 上からのみ接続できます。"]}
+2020-07-05 17:26:31,147 p=72428 u=spectre n=ansible | PLAY RECAP *****************************************************************************
+2020-07-05 17:26:31,147 p=72428 u=spectre n=ansible | 54.95.40.115               : ok=10   changed=3    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-07-30 11:50:22,751 p=77286 u=spectre n=ansible | PLAY [vpn_servers] ***************************************************************************************************************************************************************
+2020-07-30 11:50:22,775 p=77286 u=spectre n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************
+2020-07-30 11:50:24,748 p=77286 u=spectre n=ansible | [WARNING]: Platform linux on host 54.95.40.115 is using the discovered Python interpreter at /usr/bin/python, but future installation of another Python interpreter could change
+this. See https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information.
+
+2020-07-30 11:50:24,748 p=77286 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-30 11:50:24,758 p=77286 u=spectre n=ansible | TASK [config : Install and Update dependency packages] ***************************************************************************************************************************
+2020-07-30 11:50:37,798 p=77286 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-30 11:50:37,806 p=77286 u=spectre n=ansible | TASK [vpn : SoftEther VPN Directory] *********************************************************************************************************************************************
+2020-07-30 11:50:39,368 p=77286 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-30 11:50:39,380 p=77286 u=spectre n=ansible | TASK [vpn : SoftEther VPN Server Install] ****************************************************************************************************************************************
+2020-07-30 11:50:42,996 p=77286 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-30 11:50:43,004 p=77286 u=spectre n=ansible | TASK [vpn : Build SoftEther Server] **********************************************************************************************************************************************
+2020-07-30 11:50:46,713 p=77286 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-30 11:50:46,724 p=77286 u=spectre n=ansible | TASK [Register softether vpn server to systemd] **********************************************************************************************************************************
+2020-07-30 11:50:48,209 p=77286 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-30 11:50:48,219 p=77286 u=spectre n=ansible | TASK [vpn : Reload service] ******************************************************************************************************************************************************
+2020-07-30 11:50:49,364 p=77286 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-30 11:50:49,375 p=77286 u=spectre n=ansible | TASK [vpn : Restart and enable] **************************************************************************************************************************************************
+2020-07-30 11:50:51,009 p=77286 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-30 11:50:51,019 p=77286 u=spectre n=ansible | TASK [vpn : Copy config file] ****************************************************************************************************************************************************
+2020-07-30 11:50:53,042 p=77286 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-30 11:50:53,050 p=77286 u=spectre n=ansible | TASK [vpn : Copy config shell] ***************************************************************************************************************************************************
+2020-07-30 11:50:55,337 p=77286 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-30 11:50:55,346 p=77286 u=spectre n=ansible | TASK [vpn : Exec shell script for configuration] *********************************************************************************************************************************
+2020-07-30 11:50:56,738 p=77286 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-30 11:50:56,749 p=77286 u=spectre n=ansible | TASK [vpn : Copy config shell] ***************************************************************************************************************************************************
+2020-07-30 11:50:58,754 p=77286 u=spectre n=ansible | ok: [54.95.40.115]
+2020-07-30 11:50:58,763 p=77286 u=spectre n=ansible | TASK [vpn : Exec shell script] ***************************************************************************************************************************************************
+2020-07-30 11:51:00,158 p=77286 u=spectre n=ansible | changed: [54.95.40.115]
+2020-07-30 11:51:00,162 p=77286 u=spectre n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************
+2020-07-30 11:51:00,162 p=77286 u=spectre n=ansible | 54.95.40.115               : ok=13   changed=7    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

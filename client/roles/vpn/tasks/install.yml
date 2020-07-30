@@ -1,0 +1,22 @@
+- name: SoftEther VPN Client Directory
+  become: true
+  become_user: root
+  file:
+    path: "{{ softether_install_dir }}"
+    state: directory
+    mode: 0755
+
+- name: SoftEther VPN Client Install
+  become: true
+  become_user: root
+  unarchive:
+    remote_src: true
+    src: "{{ softether_src_path }}"
+    dest: "{{ softether_install_dir }}"
+
+- name: Build SoftEther Client
+  become: true
+  become_user: root
+  make:
+    chdir: "{{ softether_install_dir }}/vpnclient"
+    target: i_read_and_agree_the_license_agreement

@@ -1,0 +1,12 @@
+- name: Copy config file
+  become: true
+  become_user: root
+  copy:
+    src: client_config.sh
+    dest: "{{ vpnclient_dir }}"
+    mode: 0744
+    
+- name: Exec shell script for configuration
+  become: true
+  become_user: root
+  command: "{{ vpnclient_dir }}/client_config.sh"

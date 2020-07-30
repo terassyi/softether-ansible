@@ -1,0 +1,21 @@
+- name: Register softether vpn client to systemd
+  become: true
+  become_user: root
+  template:
+    src: systemd.j2
+    dest: /etc/systemd/system/softether.service
+    mode: 0755
+  notify: restart softether vpn client
+
+- name: Reload service
+  become: true
+  become_user: root
+  command: systemctl daemon-reload
+
+- name: Restart end enable
+  become: true
+  become_user: root
+  service:
+    name: softether
+    state: started
+    enabled: yes

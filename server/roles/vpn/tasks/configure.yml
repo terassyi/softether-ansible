@@ -1,0 +1,31 @@
+- name: Copy config file
+  become: true
+  become_user: root
+  copy:
+    src: config
+    dest: "{{ vpnserver_dir }}"
+    mode: 0744
+
+- name: Copy config shell
+  become: true
+  become_user: root
+  copy:
+    src: server_config.sh
+    dest: "{{ vpnserver_dir }}"
+    mode: 0744
+
+- name: Exec shell script for configuration
+  become: true
+  become_user: root
+  command: "{{ vpnserver_dir }}/server_config.sh"
+
+# - name: Configure softether vpn server
+#   become: true
+#   become_user: root
+#   command: "{{ item }}"
+#   with_items:
+#     - "cd {{ vpnserver_dir }}" 
+#     - "/opt/softether/vpnserver/vpncmd localhost /server /PASSWORD: /CMD ConfigSet config"
+
+# - name: Set SoftEther Server Password
+#   command: "{{ vpncmd_dir }} localhost /server /PASSWORD: /CMD SetHubPassword"

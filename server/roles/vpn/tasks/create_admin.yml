@@ -1,0 +1,20 @@
+# - name: Create Admin User Account
+#   become: true
+#   become_user: root
+#   command: "{{ vpncmd_path }} localhost /server /HUB:default /PASSWORD: /CMD {{ item }}"
+#   with_items:
+#     - "UserCreate {{ vpn_user }} /GROUP:none /REALNAME:none /NOTE:test_user"
+#     - "UserPasswordSet {{ vpn_user }} /PASSWORD:{{ vpn_password }}"
+
+- name: Copy config shell
+  become: true
+  become_user: root
+  copy:
+    src: create_admin.sh
+    dest: "{{ vpnserver_dir }}"
+    mode: 0744
+
+- name: Exec shell script
+  become: true
+  become_user: root
+  command: "{{ vpnserver_dir }}/create_admin.sh"

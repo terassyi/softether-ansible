@@ -1,0 +1,6 @@
+- name: Install and Update dependency packages
+  become: true
+  become_user: root
+  yum: 
+    name: "@Development Tools"
+    state: latest

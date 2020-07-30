@@ -1,0 +1,13 @@
+[Unit]
+Description=SoftEther VPN Server for ansible
+
+[Service]
+Type=forking
+User=root
+WorkingDirectory={{ softether_install_dir }}
+ExecStart={{ vpnserver_path }} start
+ExecStop={{ vpnserver_path }} stop
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target

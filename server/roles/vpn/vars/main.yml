@@ -1,0 +1,11 @@
+softether_install_dir: /opt/softether
+
+softether_src_path: https://www.softether-download.com/files/softether/v4.34-9745-rtm-2020.04.05-tree/Linux/SoftEther_VPN_Server/64bit_-_Intel_x64_or_AMD64/softether-vpnserver-v4.34-9745-rtm-2020.04.05-linux-x64-64bit.tar.gz
+
+vpnserver_dir: /opt/softether/vpnserver
+vpnserver_path: /opt/softether/vpnserver/vpnserver
+vpncmd_path: /opt/softether/vpnserver/vpncmd
+
+vpn_user: admin
+vpn_password: test
+vpn_shared_key: test

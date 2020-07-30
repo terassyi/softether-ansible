@@ -1,0 +1,379 @@
+
+﻿# Software Configuration File
+# ---------------------------
+# 
+# You may edit this file when the VPN Server / Client / Bridge program is not running.
+# 
+# In prior to edit this file manually by your text editor,
+# shutdown the VPN Server / Client / Bridge background service.
+# Otherwise, all changes will be lost.
+# 
+declare root
+{
+        string Region JP
+
+        declare IPsec
+        {
+                bool EtherIP_IPsec true
+                string IPsec_Secret test
+                string L2TP_DefaultHub DEFAULT
+                bool L2TP_IPsec true
+                bool L2TP_Raw true
+
+                declare EtherIP_IDSettingsList
+                {
+                }
+        }
+        declare ListenerList
+        {
+                declare Listener0
+                {
+                        bool DisableDos false
+                        bool Enabled true
+                        uint Port 443
+                }
+                declare Listener1
+                {
+                        bool DisableDos false
+                        bool Enabled true
+                        uint Port 992
+                }
+                declare Listener2
+                {
+                        bool DisableDos false
+                        bool Enabled true
+                        uint Port 1194
+                }
+                declare Listener3
+                {
+                        bool DisableDos false
+                        bool Enabled true
+                        uint Port 5555
+                }
+        }
+        declare LocalBridgeList
+        {
+                bool DoNotDisableOffloading false
+        }
+        declare ServerConfiguration
+        {
+                bool AcceptOnlyTls true
+                uint64 AutoDeleteCheckDiskFreeSpaceMin 104857600
+                uint AutoDeleteCheckIntervalSecs 300
+                uint AutoSaveConfigSpan 300
+                bool BackupConfigOnlyWhenModified true
+                string CipherName AES128-SHA
+                uint CurrentBuild 9745
+                bool DisableCoreDumpOnUnix false
+                bool DisableDeadLockCheck false
+                bool DisableDosProction false
+                bool DisableGetHostNameWhenAcceptTcp false
+                bool DisableIntelAesAcceleration false
+                bool DisableIPsecAggressiveMode false
+                bool DisableIPv6Listener false
+                bool DisableJsonRpcWebApi false
+                bool DisableNatTraversal false
+                bool DisableOpenVPNServer false
+                bool DisableSessionReconnect false
+                bool DisableSSTPServer false
+                bool DontBackupConfig false
+                bool EnableVpnAzure false
+                bool EnableVpnOverDns false
+                bool EnableVpnOverIcmp false
+                byte HashedPassword +WzqGYrR3VYXrAhKPZLGEHcIwO8=
+                string KeepConnectHost keepalive.softether.org
+                uint KeepConnectInterval 50
+                uint KeepConnectPort 80
+                uint KeepConnectProtocol 1
+                uint64 LoggerMaxLogSize 1073741823
+                uint MaxConcurrentDnsClientThreads 512
+                uint MaxConnectionsPerIP 256
+                uint MaxUnestablishedConnections 1000
+                bool NoHighPriorityProcess false
+                bool NoLinuxArpFilter false
+                bool NoSendSignature false
+                string OpenVPNDefaultClientOption dev-type$20tun,link-mtu$201500,tun-mtu$201500,cipher$20AES-128-CBC,auth$20SHA1,keysize$20128,key-method$202,tls-client
+                string OpenVPN_UdpPortList 1194
+                bool SaveDebugLog false
+                byte ServerCert MIIEejCCA2KgAwIBAgIBADANBgkqhkiG9w0BAQsFADCBuzE4MDYGA1UEAwwvaXAtMTcyLTMxLTYtMTA2LmFwLW5vcnRoZWFzdC0xLmNvbXB1dGUuaW50ZXJuYWwxODA2BgNVBAoML2lwLTE3Mi0zMS02LTEwNi5hcC1ub3J0aGVhc3QtMS5jb21wdXRlLmludGVybmFsMTgwNgYDVQQLDC9pcC0xNzItMzEtNi0xMDYuYXAtbm9ydGhlYXN0LTEuY29tcHV0ZS5pbnRlcm5hbDELMAkGA1UEBhMCVVMwHhcNMjAwNzAyMTQ0MzEwWhcNMzcxMjMxMTQ0MzEwWjCBuzE4MDYGA1UEAwwvaXAtMTcyLTMxLTYtMTA2LmFwLW5vcnRoZWFzdC0xLmNvbXB1dGUuaW50ZXJuYWwxODA2BgNVBAoML2lwLTE3Mi0zMS02LTEwNi5hcC1ub3J0aGVhc3QtMS5jb21wdXRlLmludGVybmFsMTgwNgYDVQQLDC9pcC0xNzItMzEtNi0xMDYuYXAtbm9ydGhlYXN0LTEuY29tcHV0ZS5pbnRlcm5hbDELMAkGA1UEBhMCVVMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDW15EEoAV0BGQgl83u2FxcG7oerPartGljXtBwPGFqA5q0FaUmrtXNZRkDXlSoHHRd6DpuoLZRkKgsQfoss75yjhquKHtbLyn7g2QC3+vZrUwm3s+TAOZozzLWDVTK8sBU6jybPvrES/0MJb0wYhDc7dreAdVIRXT14cK9ntY2Smn+wOpCr0GwbrtzS38J0Xhb0r8qOHsBNAEuU4YFGzBOCmBE+Cos3kJDFjuoN9HLhgOicahwOgIemaKwfEcmYcyVLQdi+/gCZsBTD9de+BEGdIRayLDEDIUzTn3ZWM4Ji123CsUmzxwQC6JLk3PpJ+jyQMkU8jIf6uc+3Gsk187PAgMBAAGjgYYwgYMwDwYDVR0TAQH/BAUwAwEB/zALBgNVHQ8EBAMCAfYwYwYDVR0lBFwwWgYIKwYBBQUHAwEGCCsGAQUFBwMCBggrBgEFBQcDAwYIKwYBBQUHAwQGCCsGAQUFBwMFBggrBgEFBQcDBgYIKwYBBQUHAwcGCCsGAQUFBwMIBggrBgEFBQcDCTANBgkqhkiG9w0BAQsFAAOCAQEAQfZSVW62u/PhyaPQHLPj7/17IcZDfmfeZ+uTuMlMmf4mQCLmZFpgrRBmKaOBhM3NERx6Kh2sbYRr484Z792LgK4EFUhTQY4ri7NQNHh14zdmo96Vb0tcNL+FE7HZfhkz1lC6ELgsvMMQurVE79gVZEafmjtsAdE+i9vPM7zKKtcEzHVFF6T82sBKIJ2QNCLWOm8vKIN/h/bFWlP9OiSRyklGvntHJzwVuzxpIc4Ql50wxMk4bXd7tdcGnUvA7e3No/GXZNoym5klKSVCTzHXNMETOt6zmsXL64g7aGShORhs8EHqBsu2YxTyhq1CwDTqjeDV2zw4V2qj5W0pAPpB8g==
+                byte ServerKey MIIEpQIBAAKCAQEA1teRBKAFdARkIJfN7thcXBu6Hqz2q7RpY17QcDxhagOatBWlJq7VzWUZA15UqBx0Xeg6bqC2UZCoLEH6LLO+co4arih7Wy8p+4NkAt/r2a1MJt7PkwDmaM8y1g1UyvLAVOo8mz76xEv9DCW9MGIQ3O3a3gHVSEV09eHCvZ7WNkpp/sDqQq9BsG67c0t/CdF4W9K/Kjh7ATQBLlOGBRswTgpgRPgqLN5CQxY7qDfRy4YDonGocDoCHpmisHxHJmHMlS0HYvv4AmbAUw/XXvgRBnSEWsiwxAyFM0592VjOCYtdtwrFJs8cEAuiS5Nz6Sfo8kDJFPIyH+rnPtxrJNfOzwIDAQABAoIBAQCDjagtDteH/RBarNnawP19ITVMh1jcNzK5OFul/jMgOWjHkOF52GDuzlMMrvxjnFjdD9CH4T0CoPN5dkT8jmu1tbI8pmkyoqSwb/oTkI3Y0rborlKoj0qHLyjPzYX4Z8DBvlSyM1RWUrl2cL1yHPp6beMxQioZgP5neYBHoDVHNBW8HU7jcgBpqCsrcnz8x5kIxoCXY0+D6P2lUywutounPzqg7pG4SSCuR+Lx2iluOfXgSjL1mAK3ZMgxjxv49vvNEqHweSTT6+8+NksIocCOLA/ge36GrpMg+ouRViV1ADGjN07PoqRKcc0F/n8mzUC0VcIurqrDEMeiwfHds8ChAoGBAP0YkQMkz1iZ9IlNhuWWBfvSkNGNX/7Bhf/p56MzGCzx7RBLor2yb0Sojx58n6JJcKnL9suo81aG7a88+uoKGQ0KCVkAwpJdy+IsNpMF4kCLA9mhx4fVhnnUDx24Bezf/spZxKJEc8BKofiFSoTMklq+4MxH7dkpSUreGVyfELHHAoGBANlOonSNkefdezLTgMw8aAWpmna0Ln9kbw6i3h3HPSoIQoEbJh+qmriB1h6m5g40tO8cbzs+coT2ovv/StLvYXts4tk+zLLjnU9bd8VlCPI6n3B5+zvGZBhc8/6eENYX5L7s/ipKeFIhq0vmB/xcB6H3Xl0mhoN9QyRmUIg6ffq5AoGBANHrj1MxM70ELJu5Lrq7vQjJ9A2qmcU+E/tXsSVeWp3kpsCOS1PVbI5g1BvwN6MuEID0yCTRY8sPrJJdHKwDZhW3jltA0yD9JP7ZtwYoqijoZHAcy9bxFlFzvnniyR9YBgclf38rEWqbPE5Zl54f4v/bM66btj4ZDU5IenalA/6/AoGAeX52Y5W3KpxwwdTwYL+xJOFTQ+SvTng3g0ZZyupW7wYZMJeeM/wtbtTggtirLOwY8MrEAaqDWoWOUDfGfLJrnRceqXlr9uQ9Ul4AU7OOUeemtrrsVNoxolFt9UAoh5pqQLi9zaU/KiQ64j9k3ZoShmKINqpQcHl7LYGqqs+RGbkCgYEAleqH1Q0DBAwu78EuoeDayqi7dbWOS+wpXVCy9J5YtUYr1pB/foeRo5OjWw60dKnald3ss9fye3gGo3LOYOckbdNvznlrko+Poc0ZurnREiUNT6njBmEyVjQmVfZsf5FbMvgvuoHTYHSf7Vki6BPetjHie2+zDbYC46M4N1GIELw=
+                uint ServerLogSwitchType 4
+                uint ServerType 0
+                bool StrictSyslogDatetimeFormat false
+                bool Tls_Disable1_0 false
+                bool Tls_Disable1_1 false
+                bool Tls_Disable1_2 false
+                bool Tls_Disable1_3 false
+                bool UseKeepConnect true
+                bool UseWebTimePage false
+                bool UseWebUI false
+
+                declare GlobalParams
+                {
+                        uint FIFO_BUDGET 10240000
+                        uint HUB_ARP_SEND_INTERVAL 5000
+                        uint IP_TABLE_EXPIRE_TIME 60000
+                        uint IP_TABLE_EXPIRE_TIME_DHCP 300000
+                        uint MAC_TABLE_EXPIRE_TIME 600000
+                        uint MAX_BUFFERING_PACKET_SIZE 2560000
+                        uint MAX_HUB_LINKS 1024
+                        uint MAX_IP_TABLES 65536
+                        uint MAX_MAC_TABLES 65536
+                        uint MAX_SEND_SOCKET_QUEUE_NUM 128
+                        uint MAX_SEND_SOCKET_QUEUE_SIZE 2560000
+                        uint MAX_STORED_QUEUE_NUM 1024
+                        uint MEM_FIFO_REALLOC_MEM_SIZE 655360
+                        uint MIN_SEND_SOCKET_QUEUE_SIZE 320000
+                        uint QUEUE_BUDGET 2048
+                        uint SELECT_TIME 256
+                        uint SELECT_TIME_FOR_NAT 30
+                        uint STORM_CHECK_SPAN 500
+                        uint STORM_DISCARD_VALUE_END 1024
+                        uint STORM_DISCARD_VALUE_START 3
+                }
+                declare ServerTraffic
+                {
+                        declare RecvTraffic
+                        {
+                                uint64 BroadcastBytes 0
+                                uint64 BroadcastCount 0
+                                uint64 UnicastBytes 0
+                                uint64 UnicastCount 0
+                        }
+                        declare SendTraffic
+                        {
+                                uint64 BroadcastBytes 0
+                                uint64 BroadcastCount 0
+                                uint64 UnicastBytes 0
+                                uint64 UnicastCount 0
+                        }
+                }
+                declare SyslogSettings
+                {
+                        string HostName $
+                        uint Port 0
+                        uint SaveType 0
+                }
+        }
+        declare VirtualHUB
+        {
+                declare DEFAULT
+                {
+                        uint64 CreatedTime 1593668590907
+                        byte HashedPassword +WzqGYrR3VYXrAhKPZLGEHcIwO8=
+                        uint64 LastCommTime 1593668590907
+                        uint64 LastLoginTime 1593668590907
+                        uint NumLogin 0
+                        bool Online true
+                        bool RadiusConvertAllMsChapv2AuthRequestToEap false
+                        string RadiusRealm $
+                        uint RadiusRetryInterval 0
+                        uint RadiusServerPort 1812
+                        string RadiusSuffixFilter $
+                        bool RadiusUsePeapInsteadOfEap false
+                        byte SecurePassword bpw3X/O5E8a6G6ccnl4uXmDtkwI=
+                        uint Type 0
+
+                        declare AccessList
+                        {
+                        }
+                        declare AdminOption
+                        {
+                                uint allow_hub_admin_change_option 0
+                                uint deny_bridge 0
+                                uint deny_change_user_password 0
+                                uint deny_empty_password 0
+                                uint deny_hub_admin_change_ext_option 0
+                                uint deny_qos 0
+                                uint deny_routing 0
+                                uint max_accesslists 0
+                                uint max_bitrates_download 0
+                                uint max_bitrates_upload 0
+                                uint max_groups 0
+                                uint max_multilogins_per_user 0
+                                uint max_sessions 0
+                                uint max_sessions_bridge 0
+                                uint max_sessions_client 0
+                                uint max_sessions_client_bridge_apply 0
+                                uint max_users 0
+                                uint no_access_list_include_file 0
+                                uint no_cascade 0
+                                uint no_change_access_control_list 0
+                                uint no_change_access_list 0
+                                uint no_change_admin_password 0
+                                uint no_change_cert_list 0
+                                uint no_change_crl_list 0
+                                uint no_change_groups 0
+                                uint no_change_log_config 0
+                                uint no_change_log_switch_type 0
+                                uint no_change_msg 0
+                                uint no_change_users 0
+                                uint no_delay_jitter_packet_loss 0
+                                uint no_delete_iptable 0
+                                uint no_delete_mactable 0
+                                uint no_disconnect_session 0
+                                uint no_enum_session 0
+                                uint no_offline 0
+                                uint no_online 0
+                                uint no_query_session 0
+                                uint no_read_log_file 0
+                                uint no_securenat 0
+                                uint no_securenat_enabledhcp 0
+                                uint no_securenat_enablenat 0
+                        }
+                        declare CascadeList
+                        {
+                        }
+                        declare LogSetting
+                        {
+                                uint PacketLogSwitchType 4
+                                uint PACKET_LOG_ARP 0
+                                uint PACKET_LOG_DHCP 1
+                                uint PACKET_LOG_ETHERNET 0
+                                uint PACKET_LOG_ICMP 0
+                                uint PACKET_LOG_IP 0
+                                uint PACKET_LOG_TCP 0
+                                uint PACKET_LOG_TCP_CONN 1
+                                uint PACKET_LOG_UDP 0
+                                bool SavePacketLog true
+                                bool SaveSecurityLog true
+                                uint SecurityLogSwitchType 4
+                        }
+                        declare Message
+                        {
+                        }
+                        declare Option
+                        {
+                                uint AccessListIncludeFileCacheLifetime 30
+                                uint AdjustTcpMssValue 0
+                                bool ApplyIPv4AccessListOnArpPacket false
+                                bool AssignVLanIdByRadiusAttribute false
+                                bool BroadcastLimiterStrictMode false
+                                uint BroadcastStormDetectionThreshold 0
+                                uint ClientMinimumRequiredBuild 0
+                                bool DenyAllRadiusLoginWithNoVlanAssign false
+                                uint DetectDormantSessionInterval 0
+                                bool DisableAdjustTcpMss false
+                                bool DisableCheckMacOnLocalBridge false
+                                bool DisableCorrectIpOffloadChecksum false
+                                bool DisableHttpParsing false
+                                bool DisableIPParsing false
+                                bool DisableIpRawModeSecureNAT false
+                                bool DisableKernelModeSecureNAT false
+                                bool DisableUdpAcceleration false
+                                bool DisableUdpFilterForLocalBridgeNic false
+                                bool DisableUserModeSecureNAT false
+                                bool DoNotSaveHeavySecurityLogs false
+                                bool DropArpInPrivacyFilterMode true
+                                bool DropBroadcastsInPrivacyFilterMode true
+                                bool FilterBPDU false
+                                bool FilterIPv4 false
+                                bool FilterIPv6 false
+                                bool FilterNonIP false
+                                bool FilterOSPF false
+                                bool FilterPPPoE false
+                                uint FloodingSendQueueBufferQuota 33554432
+                                bool ManageOnlyLocalUnicastIPv6 true
+                                bool ManageOnlyPrivateIP true
+                                uint MaxLoggedPacketsPerMinute 0
+                                uint MaxSession 0
+                                bool NoArpPolling false
+                                bool NoDhcpPacketLogOutsideHub true
+                                bool NoEnum false
+                                bool NoIpTable false
+                                bool NoIPv4PacketLog false
+                                bool NoIPv6AddrPolling false
+                                bool NoIPv6DefaultRouterInRAWhenIPv6 true
+                                bool NoIPv6PacketLog false
+                                bool NoLookBPDUBridgeId false
+                                bool NoMacAddressLog true
+                                bool NoManageVlanId false
+                                bool NoPhysicalIPOnPacketLog false
+                                bool NoSpinLockForPacketDelay false
+                                bool RemoveDefGwOnDhcpForLocalhost true
+                                uint RequiredClientId 0
+                                uint SecureNAT_MaxDnsSessionsPerIp 0
+                                uint SecureNAT_MaxIcmpSessionsPerIp 0
+                                uint SecureNAT_MaxTcpSessionsPerIp 0
+                                uint SecureNAT_MaxTcpSynSentPerIp 0
+                                uint SecureNAT_MaxUdpSessionsPerIp 0
+                                bool SecureNAT_RandomizeAssignIp false
+                                bool SuppressClientUpdateNotification false
+                                bool UseHubNameAsDhcpUserClassOption false
+                                bool UseHubNameAsRadiusNasId false
+                                string VlanTypeId 0x8100
+                                bool YieldAfterStorePacket false
+                        }
+                        declare SecureNAT
+                        {
+                                bool Disabled false
+                                bool SaveLog true
+
+                                declare VirtualDhcpServer
+                                {
+                                        string DhcpDnsServerAddress 192.168.30.1
+                                        string DhcpDnsServerAddress2 0.0.0.0
+                                        string DhcpDomainName $
+                                        bool DhcpEnabled true
+                                        uint DhcpExpireTimeSpan 7200
+                                        string DhcpGatewayAddress 192.168.30.1
+                                        string DhcpLeaseIPEnd 192.168.30.200
+                                        string DhcpLeaseIPStart 192.168.30.10
+                                        string DhcpPushRoutes $
+                                        string DhcpSubnetMask 255.255.255.0
+                                }
+                                declare VirtualHost
+                                {
+                                        string VirtualHostIp 192.168.30.1
+                                        string VirtualHostIpSubnetMask 255.255.255.0
+                                        string VirtualHostMacAddress 5E-E2-B9-3A-6F-E6
+                                }
+                                declare VirtualRouter
+                                {
+                                        bool NatEnabled true
+                                        uint NatMtu 1500
+                                        uint NatTcpTimeout 1800
+                                        uint NatUdpTimeout 60
+                                }
+                        }
+                        declare SecurityAccountDatabase
+                        {
+                                declare CertList
+                                {
+                                }
+                                declare CrlList
+                                {
+                                }
+                                declare GroupList
+                                {
+                                }
+                                declare IPAccessControlList
+                                {
+                                }
+                                declare UserList
+                                {
+                                }
+                        }
+                        declare Traffic
+                        {
+                                declare RecvTraffic
+                                {
+                                        uint64 BroadcastBytes 0
+                                        uint64 BroadcastCount 0
+                                        uint64 UnicastBytes 0
+                                        uint64 UnicastCount 0
+                                }
+                                declare SendTraffic
+                                {
+                                        uint64 BroadcastBytes 0
+                                        uint64 BroadcastCount 0
+                                        uint64 UnicastBytes 0
+                                        uint64 UnicastCount 0
+                                }
+                        }
+                }
+        }
+        declare VirtualLayer3SwitchList
+        {
+        }
+}
